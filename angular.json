@@ -26,10 +26,15 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": [],
+          "styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+  "src/styles.css"
+],
+
+"scripts": [
+  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -97,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "9c2156fb-90f6-4fc6-aa98-77ab0b65fbe4"
   }
 }

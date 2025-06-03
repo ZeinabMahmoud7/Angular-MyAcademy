@@ -1,0 +1,977 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "title": "Web Development",
+      "tracks": [
+        {
+          "id": 1,
+          "title": "Frontend",
+          "exams": [
+            {
+              "id": 1,
+              "title": "Html",
+              "Available": true,
+              "questions": [
+                {
+                  "id": 1,
+                  "question": "What does HTML stand for?",
+                  "options": [
+                    "Hyper Text Markup Language",
+                    "High Text Machine Language",
+                    "Hyper Tabular Markup Language",
+                    "None of these"
+                  ],
+                  "correctAnswer": "Hyper Text Markup Language"
+                },
+                {
+                  "id": 2,
+                  "question": "Which tag is used to create a hyperlink in HTML?",
+                  "options": [
+                    "<link>",
+                    "<a>",
+                    "<href>",
+                    "<url>"
+                  ],
+                  "correctAnswer": "<a>"
+                },
+                {
+                  "id": 3,
+                  "question": "Which HTML tag is used to display an image?",
+                  "options": [
+                    "<img>",
+                    "<image>",
+                    "<pic>",
+                    "<src>"
+                  ],
+                  "correctAnswer": "<img>"
+                },
+                {
+                  "id": 4,
+                  "question": "What is the correct HTML element for the largest heading?",
+                  "options": [
+                    "<h1>",
+                    "<heading>",
+                    "<head>",
+                    "<h6>"
+                  ],
+                  "correctAnswer": "<h1>"
+                },
+                {
+                  "id": 5,
+                  "question": "How can you make a numbered list in HTML?",
+                  "options": [
+                    "<ul>",
+                    "<ol>",
+                    "<li>",
+                    "<dl>"
+                  ],
+                  "correctAnswer": "<ol>"
+                },
+                {
+                  "id": 6,
+                  "question": "Which attribute is used in HTML to define inline styles?",
+                  "options": [
+                    "style",
+                    "class",
+                    "styles",
+                    "font"
+                  ],
+                  "correctAnswer": "style"
+                },
+                {
+                  "id": 7,
+                  "question": "How do you add a background color in HTML?",
+                  "options": [
+                    "<body bg='color'>",
+                    "<body background='color'>",
+                    "<body style='background-color:color;'>",
+                    "<background>color</background>"
+                  ],
+                  "correctAnswer": "<body style='background-color:color;'>"
+                },
+                {
+                  "id": 8,
+                  "question": "Which tag is used to create a line break in HTML?",
+                  "options": [
+                    "<break>",
+                    "<br>",
+                    "<lb>",
+                    "<line>"
+                  ],
+                  "correctAnswer": "<br>"
+                },
+                {
+                  "id": 9,
+                  "question": "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
+                  "options": [
+                    "title",
+                    "alt",
+                    "src",
+                    "longdesc"
+                  ],
+                  "correctAnswer": "alt"
+                },
+                {
+                  "id": 10,
+                  "question": "Which tag is used to define a table row in HTML?",
+                  "options": [
+                    "<tr>",
+                    "<td>",
+                    "<th>",
+                    "<row>"
+                  ],
+                  "correctAnswer": "<tr>"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "title": "Css",
+              "Available": true,
+              "questions": [
+                {
+                  "id": 1,
+                  "text": "Question 1 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 2,
+                  "text": "Question 2 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 3,
+                  "text": "Question 3 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 4,
+                  "text": "Question 4 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 5,
+                  "text": "Question 5 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 6,
+                  "text": "Question 6 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 7,
+                  "text": "Question 7 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 8,
+                  "text": "Question 8 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 9,
+                  "text": "Question 9 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 10,
+                  "text": "Question 10 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option D"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "title": "Javascript",
+              "Available": false,
+              "questions": [
+                {
+                  "id": 1,
+                  "text": "Question 1 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 2,
+                  "text": "Question 2 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 3,
+                  "text": "Question 3 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 4,
+                  "text": "Question 4 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 5,
+                  "text": "Question 5 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 6,
+                  "text": "Question 6 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option D"
+                },
+                {
+                  "id": 7,
+                  "text": "Question 7 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option D"
+                },
+                {
+                  "id": 8,
+                  "text": "Question 8 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 9,
+                  "text": "Question 9 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 10,
+                  "text": "Question 10 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Backend",
+          "exams": [
+            {
+              "id": 1,
+              "title": "Node.js",
+              "Available": true,
+              "questions": [
+                {
+                  "id": 1,
+                  "text": "Question 1 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option D"
+                },
+                {
+                  "id": 2,
+                  "text": "Question 2 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 3,
+                  "text": "Question 3 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 4,
+                  "text": "Question 4 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 5,
+                  "text": "Question 5 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 6,
+                  "text": "Question 6 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 7,
+                  "text": "Question 7 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 8,
+                  "text": "Question 8 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 9,
+                  "text": "Question 9 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option D"
+                },
+                {
+                  "id": 10,
+                  "text": "Question 10 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "title": "DataBase",
+              "Available": false,
+              "questions": [
+                {
+                  "id": 1,
+                  "text": "Question 1 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 2,
+                  "text": "Question 2 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 3,
+                  "text": "Question 3 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 4,
+                  "text": "Question 4 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option D"
+                },
+                {
+                  "id": 5,
+                  "text": "Question 5 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 6,
+                  "text": "Question 6 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 7,
+                  "text": "Question 7 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 8,
+                  "text": "Question 8 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 9,
+                  "text": "Question 9 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 10,
+                  "text": "Question 10 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Design",
+      "tracks": [
+        {
+          "id": 1,
+          "title": "UI Design",
+          "exams": [
+            {
+              "id": 1,
+              "title": "Color Theory Test",
+              "available": true,
+              "questions": [
+                {
+                  "id": 1,
+                  "text": "Question 1 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option D"
+                },
+                {
+                  "id": 2,
+                  "text": "Question 2 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 3,
+                  "text": "Question 3 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 4,
+                  "text": "Question 4 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 5,
+                  "text": "Question 5 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 6,
+                  "text": "Question 6 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 7,
+                  "text": "Question 7 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 8,
+                  "text": "Question 8 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 9,
+                  "text": "Question 9 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option D"
+                },
+                {
+                  "id": 10,
+                  "text": "Question 10 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "UX Research",
+          "exams": [
+            {
+              "id": 1,
+              "title": "User Research Quiz",
+              "available": true,
+              "questions": [
+                {
+                  "id": 1,
+                  "text": "Question 1 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 2,
+                  "text": "Question 2 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 3,
+                  "text": "Question 3 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 4,
+                  "text": "Question 4 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option D"
+                },
+                {
+                  "id": 5,
+                  "text": "Question 5 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 6,
+                  "text": "Question 6 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 7,
+                  "text": "Question 7 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 8,
+                  "text": "Question 8 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 9,
+                  "text": "Question 9 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 10,
+                  "text": "Question 10 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "title": "Wireframing Basics",
+              "available": false,
+              "questions": [
+                {
+                  "id": 1,
+                  "text": "Question 1 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 2,
+                  "text": "Question 2 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 3,
+                  "text": "Question 3 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option B"
+                },
+                {
+                  "id": 4,
+                  "text": "Question 4 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 5,
+                  "text": "Question 5 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 6,
+                  "text": "Question 6 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option C"
+                },
+                {
+                  "id": 7,
+                  "text": "Question 7 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 8,
+                  "text": "Question 8 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option A"
+                },
+                {
+                  "id": 9,
+                  "text": "Question 9 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option D"
+                },
+                {
+                  "id": 10,
+                  "text": "Question 10 text?",
+                  "options": [
+                    "Option A",
+                    "Option B",
+                    "Option C",
+                    "Option D"
+                  ],
+                  "correctAnswer": "Option D"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "user": []
+}
