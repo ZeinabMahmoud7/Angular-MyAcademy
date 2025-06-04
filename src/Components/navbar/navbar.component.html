@@ -4,18 +4,16 @@
 
     <div class="d-flex align-items-center ms-auto">
       <div class="dropdown">
-        <button
-          class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
+        <button class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center" type="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
           <i class="bi bi-person-circle fs-4 me-2"></i>
           Account
         </button>
         <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li><hr class="dropdown-divider"></li>
+          <li ><a class="dropdown-item" [routerLink]="['/profile']">Profile</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
           <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
         </ul>
       </div>

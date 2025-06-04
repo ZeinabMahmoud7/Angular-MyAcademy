@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   standalone: true,
   selector: 'app-avilable-tracks',
-  imports: [CommonModule,RouterLink],
+  imports: [CommonModule, RouterLink],
   templateUrl: './avilable-tracks.component.html',
   styleUrl: './avilable-tracks.component.css'
 })
@@ -15,7 +15,7 @@ export class AvilableTracksComponent implements OnInit {
   couresId!: number;
   track: any;
   choosedTrackId: any;
-  exams:any[]=[]
+  exams: any[] = []
   constructor(
     private availableTracks: CourrsesService,
     private activeRoute: ActivatedRoute,
@@ -24,7 +24,6 @@ export class AvilableTracksComponent implements OnInit {
   }
   ngOnInit(): void {
     this.couresId = Number(this.activeRoute.snapshot.paramMap.get('id') || '')
-    console.log(this.couresId)
     this.availableTracks.getCourseById(this.couresId).subscribe(
       {
         next: (data) => this.track = data,
@@ -34,18 +33,13 @@ export class AvilableTracksComponent implements OnInit {
   }
   choosedCourseId(trackId: number) {
     this.choosedTrackId = trackId
-    this.availableTracks.getExamsByTrackId(this.couresId,this.choosedTrackId).subscribe({
-      next:(data:any)=>{
-  this.exams=data
-  console.log(this.exams)
+    this.availableTracks.getExamsByTrackId(this.couresId, this.choosedTrackId).subscribe({
+      next: (data: any) => {
+        this.exams = data
       }
     })
+  }
 
-  }
-  ViewExam()
-  {
-    
-  }
 }
 
 

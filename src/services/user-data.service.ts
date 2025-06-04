@@ -15,8 +15,8 @@ export class UserDataService {
   {
    return this.http.post<Iuser>(this.apiUrl,data)
   }
-  getUserData():Observable<Iuser[]>
+  getUserData():Observable<Iuser>
   {
-    return this.http.get<Iuser[]>(this.apiUrl)
+    return this.http.get<Iuser>(this.apiUrl)
   }
 }
