@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDataService } from '../../services/user-data.service';
 import { CourrsesService } from '../../services/courrses.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
   selector: 'app-avilable-tracks',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './avilable-tracks.component.html',
   styleUrl: './avilable-tracks.component.css'
 })
@@ -41,6 +41,10 @@ export class AvilableTracksComponent implements OnInit {
       }
     })
 
+  }
+  ViewExam()
+  {
+    
   }
 }
 
