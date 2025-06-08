@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CourrsesService } from '../../services/courrses.service';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormService } from '../../services/form.service';
 
 @Component({
   selector: 'app-exams',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule,RouterLink],
   templateUrl: './exams.component.html',
   styleUrls: ['./exams.component.css']
 })
@@ -16,11 +17,10 @@ export class ExamsComponent implements OnInit {
   trackId!: number;
   courseId!: number;
   questions: any[] = [];
-  formQuestion: FormGroup = new FormGroup({}); // ✅ تهيئة مبدئية
+  formQuestion: FormGroup = new FormGroup({});
+  isLoaded: boolean = false;
 
-  isLoaded: boolean = false; // ✅ لتأخير العرض حتى اكتمال التحميل
-
-  constructor(private route: ActivatedRoute, private courseService: CourrsesService) {}
+  constructor(private route: ActivatedRoute, private courseService: CourrsesService,private formData:FormService) { }
 
   ngOnInit(): void {
     this.examId = Number(this.route.snapshot.paramMap.get('id'));
@@ -33,13 +33,13 @@ export class ExamsComponent implements OnInit {
         if (exam) {
           this.questions = exam.questions;
 
-          const group: { [key: string]: FormControl } = {};
+          const group: { [key: string]: FormControl } = {}
           this.questions.forEach((_, index) => {
-            group[index.toString()] = new FormControl('', Validators.required);
+            group[`question_${index}`] = new FormControl('', Validators.required);
           });
 
           this.formQuestion = new FormGroup(group);
-          this.isLoaded = true; // ✅ السماح بعرض الصفحة الآن
+          this.isLoaded = true;
         }
       }
     });
@@ -47,8 +47,7 @@ export class ExamsComponent implements OnInit {
 
   onSubmit(): void {
     if (this.formQuestion.valid) {
-      console.log('Form submitted:', this.formQuestion.value);
-      // ✅ إرسال الإجابات أو حساب النتيجة
+      this.formData.setFormData(this.formQuestion)
     }
   }
 }

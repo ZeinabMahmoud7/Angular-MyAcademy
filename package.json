@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:myAngularFinal": "node dist/my-angular-final/server/server.mjs"
+
   },
   "private": true,
   "dependencies": {

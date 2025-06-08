@@ -4,6 +4,7 @@ import { SignUpComponent } from '../Components/signup/signup.component';
 import { AvilableTracksComponent } from './../Components/avilable-tracks/avilable-tracks.component';
 import { ExamsComponent } from '../Components/exams/exams.component';
 import { ProfileComponent } from '../Components/profile/profile.component';
+import { ResultComponent } from '../Components/result/result.component';
 
 export const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -11,5 +12,6 @@ export const routes: Routes = [
   {path:'course-tracks/:id',component:AvilableTracksComponent},
   {path:'exam/:id',component:ExamsComponent},
   {path:'profile',component:ProfileComponent},
+  {path:'result',component:ResultComponent},
   {path:'',component:SignUpComponent}
 ];
