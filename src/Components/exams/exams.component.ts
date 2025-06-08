@@ -4,6 +4,7 @@ import { CourrsesService } from '../../services/courrses.service';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { FormService } from '../../services/form.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-exams',
@@ -20,7 +21,7 @@ export class ExamsComponent implements OnInit {
   formQuestion: FormGroup = new FormGroup({});
   isLoaded: boolean = false;
 
-  constructor(private route: ActivatedRoute, private courseService: CourrsesService,private formData:FormService) { }
+  constructor(private route: ActivatedRoute, private courseService: CourrsesService,private formData:FormService,private router:Router) { }
 
   ngOnInit(): void {
     this.examId = Number(this.route.snapshot.paramMap.get('id'));
@@ -46,8 +47,15 @@ export class ExamsComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.formQuestion.valid) {
-      this.formData.setFormData(this.formQuestion)
-    }
+  if (this.formQuestion.valid) {
+    const answers = this.formQuestion.value;
+
+    this.questions.forEach((_, index) => {
+      const answer = answers[`question_${index}`];
+      this.formData.setFormData(answer);
+    });
   }
+  this.router.navigate(['/result']);
+}
+
 }

@@ -8,14 +8,12 @@ import { FormService } from '../../services/form.service';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-  formData: any;
+  formData: any[]=[];
 
   constructor(private formService: FormService) {}
 
   ngOnInit(): void {
-    this.formService.getFormData().subscribe(data => {
-      this.formData = data;
-      console.log('Received form data:', this.formData);
-    });
+  this.formData=this.formService.getFormData()
+  console.log(this.formData)
   }
 }

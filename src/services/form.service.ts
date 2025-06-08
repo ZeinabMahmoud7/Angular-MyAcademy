@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormService {
-   private formDataSubject = new BehaviorSubject<any>(null);
-  formData$ = this.formDataSubject.asObservable();
+  private answers: string[] = [];
 
-  setFormData(data: any) {
-    this.formDataSubject.next(data);
+  setFormData(answer: string) {
+    this.answers.push(answer);
   }
+
   getFormData() {
-   return this.formData$;
+    return this.answers;
   }
 }
