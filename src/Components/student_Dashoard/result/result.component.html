@@ -13,7 +13,9 @@
           {{ getMessage() }}
         </p>
 
-        <a routerLink="/course-tracks/" class="btn btn-outline-success mt-4">🔁 Back To Exam Page</a>
+     <a [routerLink]="'/course-tracks/' + data.courseName" class="btn btn-outline-success mt-4">
+  🔁 Back To Exam Page
+     </a>
       </div>
     </div>
   </div>

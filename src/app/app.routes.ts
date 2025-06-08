@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from '../Components/student_Dashoard/login/login.component';
+import { LoginComponent } from '../Components/login/login.component';
 import { AvilableTracksComponent } from '../Components/student_Dashoard/avilable-tracks/avilable-tracks.component';
 import { ExamsComponent } from '../Components/student_Dashoard/exams/exams.component';
 import { ProfileComponent } from '../Components/student_Dashoard/profile/profile.component';
