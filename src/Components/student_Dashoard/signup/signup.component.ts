@@ -6,13 +6,12 @@ import {
   FormGroup,
   ReactiveFormsModule,
   ValidationErrors,
-  ValidatorFn,
   Validators
 } from '@angular/forms';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
-import { UserDataService } from '../../../services/user-data.service';
-import { CourrsesService } from '../../../services/courrses.service';
+import { UserDataService } from '../services/user-data.service';
+import { CourrsesService } from '../services/courrses.service';
 
 @Component({
   selector: 'app-sign-up',
