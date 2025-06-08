@@ -8,15 +8,15 @@ import { Iuser } from '../module/iuser';
   providedIn: 'root'
 })
 export class UserDataService {
-  apiUrl="http://localhost:3000/user"
-  constructor(private http:HttpClient) {
+
+  apiUrl = "http://localhost:3000/user"
+  constructor(private http: HttpClient) {
   }
-  setUserData(data:Iuser):Observable<Iuser>
-  {
-   return this.http.post<Iuser>(this.apiUrl,data)
+  setUserData(data: Iuser): Observable<Iuser> {
+    return this.http.post<Iuser>(this.apiUrl, data)
   }
-  getUserData():Observable<Iuser>
-  {
+  getUserData(): Observable<Iuser> {
     return this.http.get<Iuser>(this.apiUrl)
   }
+
 }

@@ -7,16 +7,7 @@
     >
       <h5 class="text-center mb-4">Login</h5>
 
-      <div class="mb-4">
-        <select class="form-select" formControlName="Role">
-          <option value="" disabled selected>Choose Your Role</option>
-          <option value="1">Student</option>
-          <option value="2">Admin</option>
-        </select>
-        <div class="text-danger" *ngIf="getRole?.touched && getRole?.hasError('required')">
-          Enter Your Role
-        </div>
-      </div>
+
 
 
       <div class="mb-4">

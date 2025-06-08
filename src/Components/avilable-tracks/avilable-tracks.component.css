@@ -24,7 +24,10 @@
 .card {
   border-radius: 15px;
   transition:  0.2s ease-in-out;
- 
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 .card:hover {
   transform: translateY(-5px);

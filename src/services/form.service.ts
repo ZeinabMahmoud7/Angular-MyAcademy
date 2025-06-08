@@ -4,13 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class FormService {
-  private answers: string[] = [];
+  private score: number = 0;
 
-  setFormData(answer: string) {
-    this.answers.push(answer);
+  setScore(score: number) {
+    this.score = score;
   }
 
-  getFormData() {
-    return this.answers;
+  getScore(): number {
+    return this.score;
   }
 }

@@ -9,11 +9,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-exams',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule,RouterLink],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './exams.component.html',
   styleUrls: ['./exams.component.css']
 })
 export class ExamsComponent implements OnInit {
+  cnt = 0;
   examId!: number;
   trackId!: number;
   courseId!: number;
@@ -21,7 +22,7 @@ export class ExamsComponent implements OnInit {
   formQuestion: FormGroup = new FormGroup({});
   isLoaded: boolean = false;
 
-  constructor(private route: ActivatedRoute, private courseService: CourrsesService,private formData:FormService,private router:Router) { }
+  constructor(private route: ActivatedRoute, private courseService: CourrsesService, private formData: FormService, private router: Router) { }
 
   ngOnInit(): void {
     this.examId = Number(this.route.snapshot.paramMap.get('id'));
@@ -47,15 +48,19 @@ export class ExamsComponent implements OnInit {
   }
 
   onSubmit(): void {
-  if (this.formQuestion.valid) {
-    const answers = this.formQuestion.value;
+    if (this.formQuestion.valid) {
+      const answers = this.formQuestion.value;
+      let correctCount = 0;
+      this.questions.forEach((question, index) => {
+        const userAnswer = answers[`question_${index}`];
+        const correctAnswer = question.correctAnswer;
+        if (userAnswer == correctAnswer)
+          correctCount++;
+        this.formData.setScore(correctCount);
+      });
+      this.router.navigate(['/result']);
 
-    this.questions.forEach((_, index) => {
-      const answer = answers[`question_${index}`];
-      this.formData.setFormData(answer);
-    });
+    }
   }
-  this.router.navigate(['/result']);
-}
 
 }

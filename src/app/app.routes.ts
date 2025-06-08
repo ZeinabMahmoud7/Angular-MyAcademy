@@ -4,7 +4,8 @@ import { SignUpComponent } from '../Components/signup/signup.component';
 import { AvilableTracksComponent } from './../Components/avilable-tracks/avilable-tracks.component';
 import { ExamsComponent } from '../Components/exams/exams.component';
 import { ProfileComponent } from '../Components/profile/profile.component';
-import { ResultComponent } from '../Components/result/result.component';
+import { ResultComponent } from '../Components/student_Dashoard/signup/result/result.component';
+import { ForwardComponent } from '../Components/forward/forward.component';
 
 export const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -13,5 +14,5 @@ export const routes: Routes = [
   {path:'exam/:id',component:ExamsComponent},
   {path:'profile',component:ProfileComponent},
   {path:'result',component:ResultComponent},
-  {path:'',component:SignUpComponent}
+  {path:'',component:ForwardComponent}
 ];
