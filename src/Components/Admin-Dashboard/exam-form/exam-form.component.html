@@ -1,0 +1,52 @@
+<div class="form-wrapper">
+  <div class="form-container container">
+    <h2 class="text-center mb-4">Add / Edit Exam</h2>
+    <form>
+      <div class="row justify-content-center">
+        <div class="mb-3 col-lg-6">
+          <label class="form-label">Exam Title</label>
+          <input type="text" class="form-control" placeholder="Enter Exam Title" name="title" required>
+        </div>
+
+        <div class="mb-3 col-lg-3">
+          <label class="form-label">Exam Time (min)</label>
+          <input type="number" class="form-control" placeholder="e.g. 10" name="examTime" required>
+        </div>
+
+        <div class="mb-3 col-lg-3">
+          <label class="form-label">Number of Questions</label>
+          <input type="number" class="form-control" placeholder="e.g. 10" name="numberOfQuestions" required>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="mb-3 col-lg-4">
+          <label class="form-label">Difficulty</label>
+          <select class="form-select" name="difficulty" required>
+            <option value="" selected disabled>Select Difficulty</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+
+        <div class="mb-3 col-lg-4">
+          <label class="form-label">Availability</label>
+          <select class="form-select" name="available" required>
+            <option value="" selected disabled>Is Available?</option>
+            <option value="true">Available</option>
+            <option value="false">Not Available</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-4">
+          <button type="submit" class="btn w-100 py-2 fs-5 rounded-pill shadow">
+            <i class="bi bi-save me-2"></i> Save Exam
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

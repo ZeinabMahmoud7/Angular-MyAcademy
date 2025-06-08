@@ -1,0 +1,30 @@
+<div class="form-wrapper">
+  <div class="form-container container">
+    <h2 class="text-center mb-4">Available Exams</h2>
+
+    <div class="row" *ngIf="exams.length > 0; else noExams">
+      <div class="col-md-6 col-lg-4 mb-4" *ngFor="let exam of exams">
+        <div class="card shadow rounded-4 border-0">
+          <div class="card-body">
+            <h5 class="card-title text-primary mb-2">{{ exam.title }}</h5>
+            <p class="mb-1"><strong>Status:</strong>
+              <span [ngClass]="{'text-success': exam.Available, 'text-danger': !exam.Available}">
+                {{ exam.Available ? 'Available' : 'Not Available' }}
+              </span>
+            </p>
+            <p class="mb-1"><strong>Time:</strong> {{ exam.examTime }} minutes</p>
+            <p class="mb-1"><strong>Difficulty:</strong> {{ exam.difficulty }}</p>
+            <p class="mb-1"><strong>Questions:</strong> {{ exam.numberOfQuestions }}</p>
+            <button class="btn w-100 mt-3 py-2 rounded-pill" routerLink="/examForm" >
+              <i class="bi bi-pencil-square me-2"></i> Edit Exam
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #noExams>
+      <p class="text-center text-muted">No exams available.</p>
+    </ng-template>
+  </div>
+</div>
