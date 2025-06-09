@@ -15,15 +15,15 @@ export class CourrsesService {
     return this.http.get<any>(this.apiUrl);
   }
 
-  getCourseById(id: number) {
-    return this.http.get(`${this.apiUrl}/${id}`);
+  getCourseById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 
   getExamsByTrackId(courseId: number, trackId: number): Observable<any[]> {
     return this.getCourseById(courseId).pipe(
       map((course: any) => {
-        const track = course.tracks.find((t: any) => t.id === trackId);
-        return track ? track.exams : [];
+        const track = (course as any).tracks.find((t: any) => t.id === trackId);
+        return track ? track.exams || [] : [];
       })
     );
   }
@@ -37,24 +37,26 @@ export class CourrsesService {
       })
     );
   }
-addExam(exam: Iexam, courseId: number, trackId: number): Observable<any> {
-  return this.http.get<any>(`${this.apiUrl}/${courseId}`).pipe(
-    map(course => {
-      const trackIndex = course.tracks.findIndex((track: any) => track.id === trackId);
-      if (trackIndex === -1) throw new Error('Track not found');
-      if (!course.tracks[trackIndex].exams) {
-        course.tracks[trackIndex].exams = [];
-      }
-      course.tracks[trackIndex].exams.push(exam);
-      return course;
-    }),
-    switchMap(updatedCourse => {
-      return this.http.put(`${this.apiUrl}/${courseId}`, updatedCourse);
-    })
-  );
-}
 
+  addExam(exam: Iexam, courseId: number, trackId: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${courseId}`).pipe(
+      map((course: any) => {
+        const tracks = (course as any).tracks;
+        const trackIndex = tracks.findIndex((track: any) => track.id === trackId);
+        if (trackIndex === -1) throw new Error('Track not found');
+        if (!tracks[trackIndex].exams) {
+          tracks[trackIndex].exams = [];
+        }
+        tracks[trackIndex].exams.push(exam);
+        return course;
+      }),
+      switchMap((updatedCourse: any) => {
+        return this.http.put(`${this.apiUrl}/${courseId}`, updatedCourse);
+      })
+    );
+  }
 
-
-
+  deleteExam(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
+  }
 }
