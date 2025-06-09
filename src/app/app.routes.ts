@@ -6,8 +6,8 @@ import { ProfileComponent } from '../Components/student_Dashoard/profile/profile
 import { ResultComponent } from '../Components/student_Dashoard/result/result.component';
 import { ForwardComponent } from '../Components/student_Dashoard/forward/forward.component';
 import { SignUpComponent } from '../Components/student_Dashoard/signup/signup.component';
-import { AdminExamComponent } from '../Components/Admin-Dashboard/admin-exam/admin-exam.component';
 import { ExamFormComponent } from '../Components/Admin-Dashboard/exam-form/exam-form.component';
+import { AdminExamComponent } from '../Components/Admin-Dashboard/admin-exam/admin-exam.component';
 
 export const routes: Routes = [
   { path: '', component: ForwardComponent },
@@ -17,7 +17,7 @@ export const routes: Routes = [
   { path: 'exam/:id', component: ExamsComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'result', component: ResultComponent },
-  { path: 'adminExam', component: AdminExamComponent },
+  { path: 'adminExam', component:AdminExamComponent },
   { path: 'examForm', component: ExamFormComponent },
 
 ];

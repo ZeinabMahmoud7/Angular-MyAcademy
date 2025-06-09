@@ -56,7 +56,20 @@ export class CourrsesService {
     );
   }
 
-  deleteExam(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.apiUrl}/${id}`);
-  }
+ deleteExam(courseId: number, trackId: number, examId: number): Observable<any> {
+  return this.getCourseById(courseId).pipe(
+    map((course: any) => {
+      const tracks = course.tracks || [];
+      const trackIndex = tracks.findIndex((t: any) => t.id === trackId);
+      if (trackIndex === -1) throw new Error('Track not found');
+
+      const exams = tracks[trackIndex].exams || [];
+      tracks[trackIndex].exams = exams.filter((e: any) => e.id !== examId);
+      return course;
+    }),
+    switchMap((updatedCourse: any) => {
+      return this.http.put(`${this.apiUrl}/${courseId}`, updatedCourse);
+    })
+  );
+}
 }

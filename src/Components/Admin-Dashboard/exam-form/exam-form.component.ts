@@ -27,7 +27,7 @@ export class ExamFormComponent implements OnInit {
   formData = new FormGroup({
     title: new FormControl('Untitled Exam', Validators.required),
     difficulty: new FormControl('medium'),
-    Available: new FormControl(true), // ✅ الاسم الصحيح
+    Available: new FormControl(true), 
     time: new FormControl(30),
     numberOfQuestions: new FormControl('10')
   });

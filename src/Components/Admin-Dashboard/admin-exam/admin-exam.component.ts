@@ -16,8 +16,8 @@ export class AdminExamComponent implements OnInit {
   courseId!: number;
   trackId!: number;
   constructor(private courseService: CourrsesService) { }
-  ngOnInit(): void {
 
+  ngOnInit(): void {
     this.courseService.getAllCourses().subscribe(
       {
         next: (data) => {
@@ -26,24 +26,41 @@ export class AdminExamComponent implements OnInit {
       }
     )
   }
+
+
   choosedCourseId(id: number) {
     this.courseId = id;
     this.courseService.getCourseById(id).subscribe(
       {
         next: (data: any) => {
           this.Tracks = data.tracks
-          console.log(this.Tracks)
         }
       }
     )
   }
+
+
   choosedTrackId(id: number) {
     this.trackId = id;
     this.courseService.getExamsByTrackId(this.courseId, this.trackId).subscribe({
       next: (data) => this.exams = data
     })
   }
-  deleteExam(id: number) {
-this.courseService
+
+
+  deleteExam(examId: number): void {
+     console.log('Deleting exam with ID:', examId);
+    if (!this.courseId || !this.trackId) return;
+
+    this.courseService.deleteExam(this.courseId, this.trackId, examId).subscribe({
+      next: () => {
+         console.log('Deleted successfully');
+        this.choosedTrackId(this.trackId);
+      },
+      error: (err) => {
+        console.error('Error deleting exam:', err);
+      }
+    });
   }
+
 }
