@@ -1,21 +1,21 @@
 <div class="form-wrapper">
-  <div class="form-container container" >
+  <div class="form-container container">
     <h2 class="text-center mb-4">Add / Edit Exam</h2>
     <form [formGroup]="formData" (ngSubmit)="onSubmit()">
       <div class="row justify-content-center">
         <div class="mb-3 col-lg-4">
           <label class="form-label">Exam Title</label>
-          <input type="text" class="form-control" formControlName="title" placeholder="Enter Exam Title" name="title" required >
+          <input type="text" class="form-control" formControlName="title" placeholder="Enter Exam Title" name="title" required>
         </div>
 
         <div class="mb-3 col-lg-4">
           <label class="form-label">Exam Time (min)</label>
-          <input type="number" class="form-control" placeholder="e.g. 10" formControlName="time" name="examTime" >
+          <input type="number" class="form-control" placeholder="e.g. 10" formControlName="time" name="examTime">
         </div>
 
         <div class="mb-3 col-lg-4">
           <label class="form-label">Number of Questions</label>
-          <input type="number" class="form-control" placeholder="e.g. 10" formControlName="numberOfQuestions" name="numOfGuestion" >
+          <input type="number" class="form-control" placeholder="e.g. 10" formControlName="numberOfQuestions" name="numOfGuestion">
         </div>
       </div>
 

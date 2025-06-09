@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { map, Observable, switchMap } from 'rxjs';
 import { Iexam } from '../module/iexam';
 
 @Injectable({
@@ -37,8 +37,24 @@ export class CourrsesService {
       })
     );
   }
-  addExam(exam:Iexam,trackId:number,courseId:number):Observable<Iexam>
-  {
-    return this.http.post<Iexam>(`${this.apiUrl}/courses/${courseId}/tracks/${courseId}`,exam);
-  }
+addExam(exam: Iexam, courseId: number, trackId: number): Observable<any> {
+  return this.http.get<any>(`${this.apiUrl}/${courseId}`).pipe(
+    map(course => {
+      const trackIndex = course.tracks.findIndex((track: any) => track.id === trackId);
+      if (trackIndex === -1) throw new Error('Track not found');
+      if (!course.tracks[trackIndex].exams) {
+        course.tracks[trackIndex].exams = [];
+      }
+      course.tracks[trackIndex].exams.push(exam);
+      return course;
+    }),
+    switchMap(updatedCourse => {
+      return this.http.put(`${this.apiUrl}/${courseId}`, updatedCourse);
+    })
+  );
+}
+
+
+
+
 }

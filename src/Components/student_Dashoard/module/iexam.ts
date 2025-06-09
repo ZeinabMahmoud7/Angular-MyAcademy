@@ -1,7 +1,7 @@
 export interface Iexam {
   title:string;
   time:number;
-  numOfGuestion:string;
+  numberOfQuestions:string;
   difficulty:string;
   Availability:boolean;
 }

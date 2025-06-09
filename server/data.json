@@ -367,6 +367,13 @@
               "examTime": 10,
               "difficulty": "medium",
               "numberOfQuestions": 10
+            },
+            {
+              "title": "Untitled Exam",
+              "difficulty": "medium",
+              "Available": true,
+              "time": 30,
+              "numberOfQuestions": "10"
             }
           ]
         },
@@ -991,18 +998,17 @@
               "examTime": 10,
               "difficulty": "medium",
               "numberOfQuestions": 10
+            },
+            {
+              "title": "Untitled Exam",
+              "difficulty": "medium",
+              "Available": true,
+              "time": 30,
+              "numberOfQuestions": "10"
             }
           ]
         }
       ]
-    },
-    {
-      "id": "e076",
-      "title": "Untitled Exam",
-      "difficulty": "medium",
-      "Availability": true,
-      "time": 30,
-      "numOfGuestion": "10"
     }
   ],
   "user": [
