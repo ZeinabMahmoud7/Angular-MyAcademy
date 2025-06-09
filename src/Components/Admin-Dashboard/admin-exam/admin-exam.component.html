@@ -1,30 +1,78 @@
-<div class="form-wrapper">
-  <div class="form-container container">
-    <h2 class="text-center mb-4">Available Exams</h2>
+<div class="container my-5">
 
-    <div class="row" *ngIf="exams.length > 0; else noExams">
-      <div class="col-md-6 col-lg-4 mb-4" *ngFor="let exam of exams">
-        <div class="card shadow rounded-4 border-0">
+  <!-- Courses Section -->
+  <section class="mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="text-primary">Available Courses</h3>
+      <button class="btn btn-success">
+        <i class="bi bi-plus-circle me-2"></i> Add Course
+      </button>
+    </div>
+    <div class="row g-4 d-flex align-items-center justify-content-center">
+      <div class="col-md-6 col-lg-4" *ngFor="let course of courses">
+        <div class="card shadow-sm h-100 border-0">
+          <div class="card-body">
+            <h5 class="card-title text-dark">{{ course.title }}</h5>
+            <p class="text-muted">Course ID: {{ course.id }}</p>
+            <button class="btn btn-outline-primary btn-sm" (click)="choosedCourseId(course.id)">
+              View Tracks
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tracks Section -->
+  <section class="mb-5" *ngIf="Tracks.length > 0">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="text-success"> Course Tracks</h3>
+      <button class="btn btn-success">
+        <i class="bi bi-plus-circle me-2"></i> Add Track
+      </button>
+    </div>
+    <div class="row g-4 d-flex align-items-center justify-content-center">
+      <div class="col-md-6 col-lg-4" *ngFor="let track of Tracks">
+        <div class="card shadow-sm h-100 border-0">
+          <div class="card-body">
+            <h5 class="card-title text-dark">{{ track.title }}</h5>
+            <p class="text-muted">Track ID: {{ track.id }}</p>
+            <button class="btn btn-outline-success btn-sm" (click)="choosedTrackId(track.id)">
+              View Exams
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exams Section -->
+  <section *ngIf="exams.length > 0">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="text-warning">Exams</h3>
+      <button class="btn btn-success"  routerLink="/examForm"  [queryParams]="{ trackId: trackId, courseId: courseId }">
+        <i class="bi bi-plus-circle me-2"></i> Add Exam 
+      </button>
+    </div>
+    <div class="row g-4 d-flex align-items-center justify-content-center">
+      <div class="col-md-6 col-lg-4" *ngFor="let exam of exams">
+        <div class="card shadow-sm h-100 rounded-4 border-0">
           <div class="card-body">
             <h5 class="card-title text-primary mb-2">{{ exam.title }}</h5>
-            <p class="mb-1"><strong>Status:</strong>
+            <p><strong>Status:</strong>
               <span [ngClass]="{'text-success': exam.Available, 'text-danger': !exam.Available}">
                 {{ exam.Available ? 'Available' : 'Not Available' }}
               </span>
             </p>
-            <p class="mb-1"><strong>Time:</strong> {{ exam.examTime }} minutes</p>
-            <p class="mb-1"><strong>Difficulty:</strong> {{ exam.difficulty }}</p>
-            <p class="mb-1"><strong>Questions:</strong> {{ exam.numberOfQuestions }}</p>
-            <button class="btn w-100 mt-3 py-2 rounded-pill" routerLink="/examForm" >
+            <p><strong>Time:</strong> {{ exam.examTime }} minutes</p>
+            <p><strong>Difficulty:</strong> {{ exam.difficulty }}</p>
+            <p><strong>Questions:</strong> {{ exam.numberOfQuestions }}</p>
+            <button class="btn btn-outline-secondary w-100 mt-3 py-2 rounded-pill" routerLink="/examForm">
               <i class="bi bi-pencil-square me-2"></i> Edit Exam
             </button>
           </div>
         </div>
       </div>
     </div>
-
-    <ng-template #noExams>
-      <p class="text-center text-muted">No exams available.</p>
-    </ng-template>
-  </div>
+  </section>
 </div>

@@ -32,7 +32,6 @@ constructor(private userData:UserDataService,private router:Router,private cours
        next:(data)=>
       {
        this.mainCourses=data
-       console.log(this.mainCourses);
       },
       error:(err)=>
       {

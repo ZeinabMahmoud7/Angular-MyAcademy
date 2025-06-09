@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
+import { Iexam } from '../module/iexam';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,9 @@ export class CourrsesService {
         return allExams;
       })
     );
+  }
+  addExam(exam:Iexam,trackId:number,courseId:number):Observable<Iexam>
+  {
+    return this.http.post<Iexam>(`${this.apiUrl}/courses/${courseId}/tracks/${courseId}`,exam);
   }
 }

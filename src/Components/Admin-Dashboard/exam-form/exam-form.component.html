@@ -1,28 +1,28 @@
 <div class="form-wrapper">
-  <div class="form-container container">
+  <div class="form-container container" >
     <h2 class="text-center mb-4">Add / Edit Exam</h2>
-    <form>
+    <form [formGroup]="formData" (ngSubmit)="onSubmit()">
       <div class="row justify-content-center">
-        <div class="mb-3 col-lg-6">
+        <div class="mb-3 col-lg-4">
           <label class="form-label">Exam Title</label>
-          <input type="text" class="form-control" placeholder="Enter Exam Title" name="title" required>
+          <input type="text" class="form-control" formControlName="title" placeholder="Enter Exam Title" name="title" required >
         </div>
 
-        <div class="mb-3 col-lg-3">
+        <div class="mb-3 col-lg-4">
           <label class="form-label">Exam Time (min)</label>
-          <input type="number" class="form-control" placeholder="e.g. 10" name="examTime" required>
+          <input type="number" class="form-control" placeholder="e.g. 10" formControlName="time" name="examTime" >
         </div>
 
-        <div class="mb-3 col-lg-3">
+        <div class="mb-3 col-lg-4">
           <label class="form-label">Number of Questions</label>
-          <input type="number" class="form-control" placeholder="e.g. 10" name="numberOfQuestions" required>
+          <input type="number" class="form-control" placeholder="e.g. 10" formControlName="numberOfQuestions" name="numOfGuestion" >
         </div>
       </div>
 
       <div class="row justify-content-center">
         <div class="mb-3 col-lg-4">
           <label class="form-label">Difficulty</label>
-          <select class="form-select" name="difficulty" required>
+          <select class="form-select" name="difficulty" formControlName="difficulty">
             <option value="" selected disabled>Select Difficulty</option>
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
@@ -32,7 +32,7 @@
 
         <div class="mb-3 col-lg-4">
           <label class="form-label">Availability</label>
-          <select class="form-select" name="available" required>
+          <select class="form-select" name="available" formControlName="Availability">
             <option value="" selected disabled>Is Available?</option>
             <option value="true">Available</option>
             <option value="false">Not Available</option>
