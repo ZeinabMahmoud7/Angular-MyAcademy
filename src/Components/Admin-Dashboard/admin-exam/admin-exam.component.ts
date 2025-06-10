@@ -49,9 +49,6 @@ export class AdminExamComponent implements OnInit {
 
 
   deleteExam(examId: number): void {
-     console.log('Deleting exam with ID:', examId);
-    if (!this.courseId || !this.trackId) return;
-
     this.courseService.deleteExam(this.courseId, this.trackId, examId).subscribe({
       next: () => {
          alert('Deleted successfully');
@@ -62,8 +59,4 @@ export class AdminExamComponent implements OnInit {
       }
     });
   }
-editExam(id:number)
-{
-
-}
 }

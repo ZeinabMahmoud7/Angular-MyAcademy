@@ -1,0 +1,39 @@
+<div class="mb-3">
+  <button class="btn btn-primary rounded-pill flex-button" [routerLink]="['/questionForm']">
+    <i class="bi bi-plus-circle me-2"></i> Add Question
+  </button>
+</div>
+
+<div class="card-body" *ngFor="let question of questions; let i=index">
+  <div class="d-flex flex-row gap-3 align-items-center mb-3">
+    <h5 class="card-title mb-0">{{i+1}}-{{question.question}}</h5>
+    <button class="btn btn-outline-primary rounded-pill flex-button ms-auto" [routerLink]="['/questionForm', question.id]">
+      <i class="bi bi-pencil-square me-2"></i> Edit
+    </button>
+    <button class="btn btn-outline-danger rounded-pill flex-button" (click)="deleteQuestion(question.id)">
+      <i class="bi bi-trash me-2"></i> Delete
+    </button>
+    <button class="btn btn-outline-secondary rounded-pill flex-button" [routerLink]="['/questionForm', question.id]">
+      <i class="bi bi-eye me-2"></i> View
+    </button>
+  </div>
+
+  <div class="card" style="width: 100%; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let option of question.options">
+        <div class="d-flex flex-row gap-3 align-items-center">
+          <span class="option-text">{{option}}</span>
+          <button class="btn btn-outline-primary rounded-pill flex-button ms-auto" [routerLink]="['/questionForm', question.id]">
+            <i class="bi bi-pencil-square me-2"></i> Edit
+          </button>
+          <button class="btn btn-outline-danger rounded-pill flex-button" (click)="deleteQuestion(question.id)">
+            <i class="bi bi-trash me-2"></i> Delete
+          </button>
+          <button class="btn btn-outline-secondary rounded-pill flex-button" [routerLink]="['/questionForm', question.id]">
+            <i class="bi bi-eye me-2"></i> View
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
