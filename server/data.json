@@ -17,7 +17,7 @@
                   "id": 1,
                   "question": "What does HTML stand for?",
                   "options": [
-                    "Hyper Text Markup Language",
+                    " hyper Text Markup Language",
                     "High Text Machine Language",
                     "Hyper Tabular Markup Language",
                     "None of these"
@@ -630,7 +630,7 @@
           "exams": [
             {
               "id": 1,
-              "title": "Color Theory Test",
+              "title": "Html",
               "available": true,
               "questions": [
                 {
@@ -746,7 +746,9 @@
               ],
               "examTime": 10,
               "difficulty": "medium",
-              "numberOfQuestions": 10
+              "numberOfQuestions": 10,
+              "Available": true,
+              "time": 10
             }
           ]
         },

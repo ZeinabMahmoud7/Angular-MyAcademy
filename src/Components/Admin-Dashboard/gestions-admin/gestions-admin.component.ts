@@ -31,8 +31,16 @@ constructor(private courseCervice:CourrsesService,private activeRoute:ActivatedR
     }
     )
   }
-  deleteQuestion(id:number)
-  {
+  deleteQuestion(questionId: number) {
+  if (confirm('Do You really want to delete question')) {
+    this.courseCervice.deleteQuestion(this.courseId, this.trackId, this.examId, questionId).subscribe({
+      next: () => {
+        this.questions = this.questions.filter(q => q.id !== questionId);
+        console.log('Deleted Successfully');
+      },
 
+    });
   }
+}
+
 }

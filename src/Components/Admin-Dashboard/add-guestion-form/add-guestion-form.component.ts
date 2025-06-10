@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CourrsesService } from '../../services/courrses.service';
 import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-add-guestion-form',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './add-guestion-form.component.html',
   styleUrl: './add-guestion-form.component.css'
 })

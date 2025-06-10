@@ -1,0 +1,108 @@
+.card-body {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.list-group-item {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.option-text {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: #444;
+}
+
+.flex-button {
+  flex: 1;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+  min-width: 60px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.flex-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-outline-danger {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .d-flex.flex-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .flex-button {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .option-text {
+    white-space: normal;
+  }
+
+  .ms-md-auto {
+    margin-left: 0 !important;
+  }
+}

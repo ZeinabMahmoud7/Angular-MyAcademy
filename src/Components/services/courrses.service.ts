@@ -90,7 +90,9 @@ export class CourrsesService {
     );
   }
 
-  getExamsByTrackId(courseId: number, trackId: number): Observable<any[]> {
+  getExamsByTrackId(
+    courseId: number,
+    trackId: number): Observable<any[]> {
     return this.getCourseById(courseId).pipe(
       map((course) => {
         const track = course.tracks.find((t: any) => t.id === trackId);
@@ -99,7 +101,10 @@ export class CourrsesService {
     );
   }
 
-  getQuestionsByExamId(courseId: number, trackId: number, examId: number): Observable<any> {
+  getQuestionsByExamId(
+    courseId: number,
+    trackId: number,
+    examId: number): Observable<any> {
     return this.getCourseById(courseId).pipe(
       map((course: any) => {
         const tracks = course.tracks;
@@ -116,7 +121,11 @@ export class CourrsesService {
     )
 
   }
-  getQuestionDetails(courseId: number, trackId: number, examId: number, questionId: number): Observable<any> {
+  getQuestionDetails(
+    courseId: number,
+    trackId: number,
+    examId: number,
+    questionId: number): Observable<any> {
     return this.getQuestionsByExamId(courseId, trackId, examId).pipe(
       map((questions) => {
         const question = questions.find((q: any) => q.id == questionId)
@@ -125,4 +134,85 @@ export class CourrsesService {
       )
     )
   }
+addQuestion(
+  courseId: number,
+  trackId: number,
+  examId: number,
+  newQuestion: any
+): Observable<any> {
+  return this.getCourseById(courseId).pipe(
+    map((course: any) => {
+      const track = course.tracks?.find((t: any) => t.id === trackId);
+      if (!track) throw new Error('Track not found');
+
+      const exam = track.exams?.find((e: any) => e.id === examId);
+      if (!exam) throw new Error('Exam not found');
+
+      if (!exam.questions) exam.questions = [];
+
+      // تعيين ID تلقائي إذا لم يكن موجود
+      const maxId = Math.max(0, ...exam.questions.map((q: any) => q.id || 0));
+      newQuestion.id = maxId + 1;
+
+      exam.questions.push(newQuestion);
+      return course;
+    }),
+    switchMap((updatedCourse: any) => {
+      return this.http.put(`${this.apiUrl}/${courseId}`, updatedCourse);
+    })
+  );
+}
+
+  editQuistion(
+    courseId: number,
+    trackId: number,
+    examId: number,
+    questionId: number,
+    updatedQuestion: any
+  ): Observable<any> {
+    return this.getCourseById(courseId).pipe(
+      map((course: any) => {
+        const track = course.tracks?.find((t: any) => t.id === trackId);
+        if (!track) throw new Error('Track not found');
+
+        const exam = track.exams?.find((e: any) => e.id === examId);
+        if (!exam) throw new Error('Exam not found');
+
+        const questionIndex = exam.questions?.findIndex((q: any) => q.id === questionId);
+        if (questionIndex === -1 || questionIndex === undefined) {
+          throw new Error('Question not found');
+        }
+        exam.questions[questionIndex] = { ...exam.questions[questionIndex], ...updatedQuestion };
+        return course;
+      }),
+      switchMap((updatedCourse: any) => {
+        return this.http.put(`${this.apiUrl}/${courseId}`, updatedCourse);
+      })
+    );
+  }
+deleteQuestion(
+  courseId: number,
+  trackId: number,
+  examId: number,
+  questionId: number
+): Observable<any> {
+  return this.getCourseById(courseId).pipe(
+    map((course: any) => {
+      const track = course.tracks?.find((t: any) => t.id === trackId);
+      if (!track) throw new Error('Track not found');
+
+      const exam = track.exams?.find((e: any) => e.id === examId);
+      if (!exam) throw new Error('Exam not found');
+
+      if (!exam.questions) throw new Error('Questions not found');
+
+      exam.questions = exam.questions.filter((q: any) => q.id !== questionId);
+
+      return course;
+    }),
+    switchMap((updatedCourse: any) => {
+      return this.http.put(`${this.apiUrl}/${courseId}`, updatedCourse);
+    })
+  );
+}
 }
