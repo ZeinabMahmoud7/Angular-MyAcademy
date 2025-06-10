@@ -27,7 +27,7 @@ export class ExamFormComponent implements OnInit {
   formData = new FormGroup({
     title: new FormControl('Untitled Exam', Validators.required),
     difficulty: new FormControl('medium'),
-    Available: new FormControl(true), 
+    Available: new FormControl(true),
     time: new FormControl(30),
     numberOfQuestions: new FormControl('10')
   });
@@ -36,7 +36,7 @@ export class ExamFormComponent implements OnInit {
 
   onSubmit() {
     if (this.formData.valid) {
-      const exam: Iexam = this.formData.value as Iexam;
+      const exam: Iexam = this.formData.value as unknown as Iexam;
 
       this.trackId = Number(this.routerLink.snapshot.queryParamMap.get('trackId'));
       this.courseId = Number(this.routerLink.snapshot.queryParamMap.get('courseId'));

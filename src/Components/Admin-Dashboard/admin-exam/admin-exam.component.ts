@@ -54,7 +54,7 @@ export class AdminExamComponent implements OnInit {
 
     this.courseService.deleteExam(this.courseId, this.trackId, examId).subscribe({
       next: () => {
-         console.log('Deleted successfully');
+         alert('Deleted successfully');
         this.choosedTrackId(this.trackId);
       },
       error: (err) => {
