@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, switchMap } from 'rxjs';
-import { Iexam } from '../module/iexam';
+import { Iexam } from '../student_Dashoard/module/iexam';
 
 @Injectable({
   providedIn: 'root'
@@ -72,4 +72,29 @@ export class CourrsesService {
     })
   );
 }
+getExamById(id: number): Observable<Iexam | undefined> {
+  return this.getAllExams().pipe(
+    map((exams: Iexam[]) => exams.find((exam) => exam.id === id))
+  );
+}
+
+EditExam(courseId: number, trackId: number, examId: number, updatedExam: Iexam): Observable<any> {
+  return this.getCourseById(courseId).pipe(
+    map((course: any) => {
+      const tracks = course.tracks || [];
+      const track = tracks.find((t: any) => t.id === trackId);
+      if (!track) throw new Error('Track not found');
+
+      const examIndex = track.exams.findIndex((e: any) => e.id === examId);
+      if (examIndex === -1) throw new Error('Exam not found');
+
+      track.exams[examIndex] = { ...track.exams[examIndex], ...updatedExam };
+      return course;
+    }),
+    switchMap((updatedCourse: any) => {
+      return this.http.put(`${this.apiUrl}/${courseId}`, updatedCourse);
+    })
+  );
+}
+
 }

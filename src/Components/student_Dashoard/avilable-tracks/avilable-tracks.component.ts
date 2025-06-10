@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserDataService } from '../services/user-data.service';
-import { CourrsesService } from '../services/courrses.service';
+import { UserDataService } from '../../services/user-data.service';
+import { CourrsesService } from '../../services/courrses.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 

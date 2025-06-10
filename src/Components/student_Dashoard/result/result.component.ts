@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormService } from '../services/form.service';
-import { CourrsesService } from '../services/courrses.service';
+import { FormService } from '../../services/form.service';
+import { CourrsesService } from '../../services/courrses.service';
 import { ActivatedRoute, Router, RouterLink, RouterModule } from '@angular/router';
-import { UserDataService } from '../services/user-data.service';
+import { UserDataService } from '../../services/user-data.service';
 import { Iuser } from '../module/iuser';
 
 @Component({

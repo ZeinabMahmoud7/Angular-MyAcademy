@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CourrsesService } from '../../student_Dashoard/services/courrses.service';
+import { CourrsesService } from '../../services/courrses.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -62,5 +62,8 @@ export class AdminExamComponent implements OnInit {
       }
     });
   }
+editExam(id:number)
+{
 
+}
 }

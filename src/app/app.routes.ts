@@ -18,6 +18,6 @@ export const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'result', component: ResultComponent },
   { path: 'adminExam', component:AdminExamComponent },
-  { path: 'examForm', component: ExamFormComponent },
+  { path: 'examForm/:id', component: ExamFormComponent },
 
 ];

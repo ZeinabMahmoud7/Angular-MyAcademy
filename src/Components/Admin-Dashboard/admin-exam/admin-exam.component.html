@@ -45,7 +45,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h3 class="text-warning fw-bold">Exams</h3>
       <button class="btn btn-success rounded-pill px-4"
-              routerLink="/examForm"
+              routerLink="/examForm/0"
               [queryParams]="{ trackId: trackId, courseId: courseId }">
         <i class="bi bi-plus-circle me-2"></i> Add Exam
       </button>
@@ -66,8 +66,10 @@
 
             <div class="mt-auto d-flex gap-2">
               <button class="btn btn-outline-secondary w-100 py-2 rounded-pill"
-                      routerLink="/examForm"
-                      [queryParams]="{ examId: exam.id, trackId: trackId, courseId: courseId }">
+
+                      [queryParams]="{ examId: exam.id, trackId: trackId, courseId: courseId }"
+                      [routerLink]="[`/examForm/${exam.id}`]"
+                      >
                 <i class="bi bi-pencil-square me-2"></i> Edit
               </button>
               <button class="btn btn-outline-danger w-100 py-2 rounded-pill" (click)="deleteExam(exam.id)">

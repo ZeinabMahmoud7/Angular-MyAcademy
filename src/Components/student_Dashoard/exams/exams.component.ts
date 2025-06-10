@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { CourrsesService } from '../services/courrses.service';
+import { CourrsesService } from '../../services/courrses.service';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
-import { FormService } from '../services/form.service';
+import { FormService } from '../../services/form.service';
 import { Router } from '@angular/router';
 
 @Component({

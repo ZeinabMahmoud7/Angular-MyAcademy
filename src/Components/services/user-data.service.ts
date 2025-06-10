@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Iuser } from '../module/iuser';
+import { Iuser } from '../student_Dashoard/module/iuser';
 
 
 @Injectable({
