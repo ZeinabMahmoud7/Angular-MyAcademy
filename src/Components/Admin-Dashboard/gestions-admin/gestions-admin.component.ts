@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-exam-gestions-admin',
   imports: [CommonModule,RouterLink],
-  templateUrl: './exam-gestions-admin.component.html',
-  styleUrl: './exam-gestions-admin.component.css'
+  templateUrl: './gestions-admin.component.html',
+  styleUrl: './gestions-admin.component.css'
 })
 export class ExamGestionsAdminComponent implements OnInit{
   questions:any[]=[]
@@ -26,9 +26,7 @@ constructor(private courseCervice:CourrsesService,private activeRoute:ActivatedR
 
     this.courseCervice.getQuestionsByExamId(this.courseId,this.trackId,this.examId).subscribe(
     {
-      next:(data)=>{this.questions=data
-        console.log(this.questions)
-      },
+      next:(data)=>{this.questions=data},
       error:(err)=>{console.log(err)}
     }
     )

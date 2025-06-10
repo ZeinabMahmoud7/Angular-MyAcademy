@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { CourrsesService } from '../../services/courrses.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-question-form',
+  selector: 'app-add-guestion-form',
   imports: [],
-  templateUrl: './question-form.component.html',
-  styleUrl: './question-form.component.css'
+  templateUrl: './add-guestion-form.component.html',
+  styleUrl: './add-guestion-form.component.css'
 })
-export class QuestionFormComponent implements OnInit {
+export class AddGuestionFormComponent implements OnInit {
   question: any
   examId: any
   trackId: any
@@ -23,7 +23,9 @@ export class QuestionFormComponent implements OnInit {
     this.trackId = this.activeRoute.snapshot.queryParamMap.get('trackId')
 
     this.courseService.getQuestionDetails(this.courseId,this.trackId,this.examId,this.questionId).subscribe({
-       next:(data)=>{this.question=data}
+       next:(data)=>{this.question=data
+        console.log(this.question)
+       }
     })
 
   }

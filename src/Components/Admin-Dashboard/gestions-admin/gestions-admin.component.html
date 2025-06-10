@@ -1,21 +1,23 @@
-<div class="mb-3 d-flex justify-content-start">
-  <button class="btn btn-primary btn-sm rounded-pill " [routerLink]="['/questionForm']">
-    <i class="bi bi-plus-circle me-1"></i> Add Question
-  </button>
-</div>
 
 <div class="card-body" *ngFor="let question of questions; let i=index">
   <div class="d-flex flex-row gap-3 align-items-center mb-3 flex-wrap">
+
     <h5 class="card-title mb-0 col-12 col-md-auto">{{i+1}}-{{question.question}}</h5>
-    <button class="btn btn-outline-primary btn-sm rounded-pill ms-md-auto col-2" [routerLink]="['/questionForm', question.id]">
+
+    <button class="btn btn-outline-primary btn-sm rounded-pill ms-md-auto col-2"
+    [queryParams]="{ trackId: trackId, courseId: courseId ,questionId:question.id }"
+    [routerLink]="['/questionForm', question.id]">
       <i class="bi bi-pencil-square me-1"></i>
     </button>
     <button class="btn btn-outline-danger btn-sm rounded-pill  col-2" (click)="deleteQuestion(question.id)">
       <i class="bi bi-trash me-1"></i>
     </button>
-
+      <button class="btn btn-outline-primary btn-sm rounded-pill  col-2 "
+    [queryParams]="{ trackId: trackId, courseId: courseId ,questionId:question.id }"
+      [routerLink]="['/questionFormAdd',question.id]">
+    <i class="bi bi-plus-circle me-1"></i>
+  </button>
   </div>
-
   <div class="card" style="width: 100%; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
     <ul class="list-group list-group-flush">
       <li class="list-group-item" *ngFor="let option of question.options">
