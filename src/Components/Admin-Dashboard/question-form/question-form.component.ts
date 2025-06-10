@@ -42,7 +42,9 @@ export class QuestionFormComponent implements OnInit {
   ).subscribe({
     next: () => {
       alert('Edited Successfully');
-      this.route.navigate(['/questionForm',this.questionId])
+      this.route.navigate(['/examQuestionsAdmin',this.questionId],
+       { queryParams: { trackId: this.trackId, courseId: this.courseId } }
+      )
     },
 
   });

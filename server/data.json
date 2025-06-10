@@ -17,10 +17,10 @@
                   "id": 1,
                   "question": "What does HTML stand for?",
                   "options": [
-                    " hyper Text Markup Language",
+                    " hyper text Markup Language",
                     "High Text Machine Language",
                     "Hyper Tabular Markup Language",
-                    "None of these"
+                    "High Text Machine Language"
                   ],
                   "correctAnswer": "Hyper Text Markup Language"
                 },

@@ -71,8 +71,7 @@ export class ExamFormComponent implements OnInit {
         this.courseService.EditExam(this.courseId, this.trackId, this.examId, exam).subscribe({
           next: () => {
             alert('Exam updated successfully!');
-            this.router.navigate(['/adminExam']);
-          },
+                      },
           error: () => alert('Failed to update exam.')
         });
       }
