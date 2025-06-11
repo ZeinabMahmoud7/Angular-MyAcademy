@@ -263,14 +263,14 @@
               "questions": [
                 {
                   "id": 1,
-                  "text": "Question 1 text?",
+                  "text": "What does HTML stand for?",
                   "options": [
                     "Option A",
                     "Option B",
                     "Option C",
                     "Option D"
                   ],
-                  "correctAnswer": "Option D"
+                  "correctAnswer": "Option A"
                 },
                 {
                   "id": 2,
@@ -515,7 +515,7 @@
           "exams": [
             {
               "id": 1,
-              "title": "User Research Quiz",
+              "title": "Node.js",
               "available": true,
               "questions": [
                 {
@@ -631,7 +631,9 @@
               ],
               "examTime": 10,
               "difficulty": "medium",
-              "numberOfQuestions": 10
+              "numberOfQuestions": 10,
+              "Available": true,
+              "time": 30
             },
             {
               "id": 2,

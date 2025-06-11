@@ -27,19 +27,12 @@ export class QuestionFormComponent implements OnInit {
 
     this.courseService.getQuestionDetails(this.courseId,this.trackId,this.examId,this.questionId).subscribe({
        next:(data)=>{this.question=data
-        console.log(this.question)
        }
     })
 
   }
   onSubmit() {
-  this.courseService.editQuistion(
-    Number(this.courseId),
-    Number(this.trackId),
-    Number(this.examId),
-    Number(this.questionId),
-    this.question
-  ).subscribe({
+  this.courseService.editQuistion(Number(this.trackId), Number(this.courseId),Number(this.examId),Number(this.questionId),this.question).subscribe({
     next: () => {
       alert('Edited Successfully');
       this.route.navigate(['/examQuestionsAdmin',this.questionId],
@@ -50,9 +43,6 @@ export class QuestionFormComponent implements OnInit {
   });
 }
 
-deleteOption(id:number)
-{
 
-}
 
 }

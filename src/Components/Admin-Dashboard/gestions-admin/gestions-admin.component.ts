@@ -23,7 +23,6 @@ constructor(private courseCervice:CourrsesService,private activeRoute:ActivatedR
     this.courseId=this.activeRoute.snapshot.queryParamMap.get('courseId')
     this.trackId=this.activeRoute.snapshot.queryParamMap.get('trackId')
 
-
     this.courseCervice.getQuestionsByExamId(this.courseId,this.trackId,this.examId).subscribe(
     {
       next:(data)=>{this.questions=data},
@@ -36,7 +35,7 @@ constructor(private courseCervice:CourrsesService,private activeRoute:ActivatedR
     this.courseCervice.deleteQuestion(this.courseId, this.trackId, this.examId, questionId).subscribe({
       next: () => {
         this.questions = this.questions.filter(q => q.id !== questionId);
-        console.log('Deleted Successfully');
+       alert('Deleted Successfully');
       },
 
     });

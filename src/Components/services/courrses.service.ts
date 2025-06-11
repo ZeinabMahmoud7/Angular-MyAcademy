@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, switchMap } from 'rxjs';
 import { Iexam } from '../student_Dashoard/module/iexam';
+import { IQuestion } from '../student_Dashoard/module/i-question';
 
 @Injectable({
   providedIn: 'root'
@@ -108,11 +109,11 @@ export class CourrsesService {
     return this.getCourseById(courseId).pipe(
       map((course: any) => {
         const tracks = course.tracks;
-        const track = tracks.find((t: any) => t.id = trackId)
+        const track = tracks.find((t: any) => t.id == trackId)
         if (!track) throw new Error("track not found")
 
         const exams = track.exams
-        const examIndex = exams.findIndex((e: any) => e.id = examId)
+        const examIndex = exams.findIndex((e: any) => e.id == examId)
         if (examIndex == -1) throw new Error("Exam not found")
 
         return exams[examIndex].questions
@@ -121,11 +122,8 @@ export class CourrsesService {
     )
 
   }
-  getQuestionDetails(
-    courseId: number,
-    trackId: number,
-    examId: number,
-    questionId: number): Observable<any> {
+
+  getQuestionDetails(courseId: number,trackId: number,examId: number,questionId: number): Observable<any> {
     return this.getQuestionsByExamId(courseId, trackId, examId).pipe(
       map((questions) => {
         const question = questions.find((q: any) => q.id == questionId)
@@ -134,12 +132,8 @@ export class CourrsesService {
       )
     )
   }
-addQuestion(
-  courseId: number,
-  trackId: number,
-  examId: number,
-  newQuestion: any
-): Observable<any> {
+
+addQuestion(courseId: number,trackId: number,examId: number,newQuestion: IQuestion): Observable<any> {
   return this.getCourseById(courseId).pipe(
     map((course: any) => {
       const track = course.tracks?.find((t: any) => t.id === trackId);
@@ -162,15 +156,11 @@ addQuestion(
   );
 }
 
-  editQuistion(
-    courseId: number,
-    trackId: number,
-    examId: number,
-    questionId: number,
-    updatedQuestion: any
-  ): Observable<any> {
+  editQuistion(trackId: number,courseId: number,examId: number,questionId: number,updatedQuestion: IQuestion): Observable<any> {
     return this.getCourseById(courseId).pipe(
       map((course: any) => {
+        console.log('Course:', course);
+
         const track = course.tracks?.find((t: any) => t.id === trackId);
         if (!track) throw new Error('Track not found');
 
@@ -189,12 +179,7 @@ addQuestion(
       })
     );
   }
-deleteQuestion(
-  courseId: number,
-  trackId: number,
-  examId: number,
-  questionId: number
-): Observable<any> {
+deleteQuestion(courseId: number,trackId: number,examId: number,questionId: number): Observable<any> {
   return this.getCourseById(courseId).pipe(
     map((course: any) => {
       const track = course.tracks?.find((t: any) => t.id === trackId);
