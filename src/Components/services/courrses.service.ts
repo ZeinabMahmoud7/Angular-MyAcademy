@@ -150,7 +150,6 @@ addQuestion(
 
       if (!exam.questions) exam.questions = [];
 
-      // تعيين ID تلقائي إذا لم يكن موجود
       const maxId = Math.max(0, ...exam.questions.map((q: any) => q.id || 0));
       newQuestion.id = maxId + 1;
 

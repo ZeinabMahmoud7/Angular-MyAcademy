@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormService } from '../../services/form.service';
 import { CourrsesService } from '../../services/courrses.service';
 import { ActivatedRoute, Router, RouterLink, RouterModule } from '@angular/router';
 import { UserDataService } from '../../services/user-data.service';
@@ -13,28 +12,34 @@ import { Iuser } from '../module/iuser';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-  score: number = 0;
+  score: any;
   data!: Iuser;
+
   constructor(
     private userData: UserDataService,
     private route: Router
-  ) { }
+  ) {}
 
-ngOnInit(): void {
-  this.score = this.userData.getScore();
+  ngOnInit(): void {
+    this.userData.getUserData().subscribe((user: Iuser[]) => {
+      this.data = user[user.length - 1];
 
-  this.userData.getUserData().subscribe((user: Iuser) => {
-    this.data = user;
-    this.data.score = this.score;
+      // لو أول مرة ياخد الامتحان، خزّن النتيجة
+      if (this.data.score === "didn't take any exam") {
+        this.data.score = this.userData.getScore();
 
-    this.userData.updateUserData(this.data).subscribe({
-      next: () => console.log('Score saved to database'),
-      error: err => console.error('Error saving score', err)
+        this.userData.updateUserData(this.data, this.data.id).subscribe({
+          next: () => {
+            console.log('Score saved to database');
+            this.score = this.data.score;
+          },
+          error: err => console.error('Error saving score', err)
+        });
+      } else {
+        this.score = this.data.score;
+      }
     });
-  });
-}
-
-
+  }
 
   getMessage(): string {
     if (this.score >= 8) return ' Excellent! You nailed it!';

@@ -3,7 +3,6 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CourrsesService } from '../../services/courrses.service';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
-import { FormService } from '../../services/form.service';
 import { Router } from '@angular/router';
 import { UserDataService } from '../../services/user-data.service';
 
@@ -49,19 +48,35 @@ export class ExamsComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.formQuestion.valid) {
-      const answers = this.formQuestion.value;
-      let correctCount = 0;
-      this.questions.forEach((question, index) => {
-        const userAnswer = answers[`question_${index}`];
-        const correctAnswer = question.correctAnswer;
-        if (userAnswer == correctAnswer)
-          correctCount++;
-        this.userData.setScore(correctCount);
-      });
-      this.router.navigate(['/result']);
+  if (this.formQuestion.valid) {
+    const answers = this.formQuestion.value;
+    let correctCount = 0;
 
-    }
+    this.questions.forEach((question, index) => {
+      const userAnswer = answers[`question_${index}`];
+      const correctAnswer = question.correctAnswer;
+      if (userAnswer == correctAnswer) correctCount++;
+    });
+
+    this.userData.getUserData().subscribe(users => {
+      const lastUser = users[users.length - 1];
+
+      if (!lastUser || !lastUser.id) {
+        console.error('No user found to update score.');
+        return;
+      }
+
+      const updatedUser = { ...lastUser, score: correctCount };
+
+      this.userData.updateUserData(updatedUser, updatedUser.id).subscribe({
+        next: () => {
+          console.log('Score updated successfully');
+          this.router.navigate(['/result']);
+        },
+        error: err => console.error('Failed to update score:', err)
+      });
+    });
   }
+}
 
 }

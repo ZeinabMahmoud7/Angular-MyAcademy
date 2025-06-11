@@ -1,0 +1,15 @@
+<div class="students-wrapper">
+  <h1 class="title">All Student Results</h1>
+  <div class="students-grid">
+    <div class="result-card" *ngFor="let student of studentData">
+      <h3>{{ student.name }}</h3>
+      <p><strong>Email:</strong> {{ student.email }}</p>
+      <p>
+        <strong>Score:</strong>
+
+          {{ student.score }}
+       
+      </p>
+    </div>
+  </div>
+</div>

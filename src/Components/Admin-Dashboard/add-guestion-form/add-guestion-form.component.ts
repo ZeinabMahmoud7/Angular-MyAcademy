@@ -24,7 +24,8 @@ export class AddGuestionFormComponent implements OnInit {
     this.trackId = this.activeRoute.snapshot.queryParamMap.get('trackId')
 
     this.courseService.getQuestionDetails(this.courseId,this.trackId,this.examId,this.questionId).subscribe({
-       next:(data)=>{this.question=data
+       next:(data)=>{
+        this.question=data
         console.log(this.question)
        }
     })

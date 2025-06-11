@@ -8,27 +8,28 @@ import { Iuser } from '../student_Dashoard/module/iuser';
   providedIn: 'root'
 })
 export class UserDataService {
+  private score: number = 0;
 
   apiUrl = "http://localhost:3000/user"
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
+
   setUserData(data: Iuser): Observable<Iuser> {
     return this.http.post<Iuser>(this.apiUrl, data)
   }
-  getUserData(): Observable<Iuser> {
-    return this.http.get<Iuser>(this.apiUrl)
+  getUserData(): Observable<Iuser[]> {
+    return this.http.get<Iuser[]>(this.apiUrl)
   }
-  private score: number = 0;
 
   setScore(score: number) {
-   return this.score = score;
+    return this.score = score;
   }
 
   getScore(): number {
     return this.score;
   }
-  updateUserData(user: Iuser): Observable<Iuser> {
-  return this.http.put<Iuser>(`http://localhost:3000/users/${user.studentId}`, user);
+updateUserData(user: Iuser, id: number | string): Observable<Iuser> {
+  return this.http.put<Iuser>(`${this.apiUrl}/${id}`, user);
 }
+
 
 }

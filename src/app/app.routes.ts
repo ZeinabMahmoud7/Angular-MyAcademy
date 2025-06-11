@@ -24,7 +24,7 @@ export const routes: Routes = [
   { path: 'adminExam', component:AdminExamComponent },
   { path: 'examForm/:id', component: ExamFormComponent },
   { path: 'questionForm/:id', component: QuestionFormComponent },
-  { path: 'questionFormAdd/:id', component: AddGuestionFormComponent },
+  { path: 'questionFormAdd', component: AddGuestionFormComponent },
   { path: 'userResults', component: StudentResultsComponent },
 
   { path: 'examQuestionsAdmin/:id', component: ExamGestionsAdminComponent },
