@@ -3,4 +3,6 @@ export interface Iuser {
   email:string;
   courseName:string;
   studentId:number;
+ score: number | string;
+
 }

@@ -1001,20 +1001,13 @@
       ]
     }
   ],
-  "user": [
+  "users": [
     {
-      "id": "7309",
-      "name": "shimaa",
-      "email": "shyma0448@gmail.com",
-      "courseName": "1",
-      "studentId": 1
-    },
-    {
-      "id": "86b6",
-      "name": "shimaa",
-      "email": "shyma0448@gmail.com",
-      "courseName": "1",
-      "studentId": 1
+      "studentId": 1,
+      "name": "Ahmed",
+      "email": "ahmed@example.com",
+      "courseName": "Math",
+      "score": "didn't take any exam"
     }
   ]
 }

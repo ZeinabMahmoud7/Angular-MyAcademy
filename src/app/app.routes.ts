@@ -11,6 +11,7 @@ import { AdminExamComponent } from '../Components/Admin-Dashboard/admin-exam/adm
 import { ExamGestionsAdminComponent } from '../Components/Admin-Dashboard/gestions-admin/gestions-admin.component';
 import { QuestionFormComponent } from '../Components/Admin-Dashboard/question-form/question-form.component';
 import { AddGuestionFormComponent } from '../Components/Admin-Dashboard/add-guestion-form/add-guestion-form.component';
+import { StudentResultsComponent } from '../Components/Admin-Dashboard/student-results/student-results.component';
 
 export const routes: Routes = [
   { path: '', component: ForwardComponent },
@@ -24,6 +25,8 @@ export const routes: Routes = [
   { path: 'examForm/:id', component: ExamFormComponent },
   { path: 'questionForm/:id', component: QuestionFormComponent },
   { path: 'questionFormAdd/:id', component: AddGuestionFormComponent },
+  { path: 'userResults', component: StudentResultsComponent },
+
   { path: 'examQuestionsAdmin/:id', component: ExamGestionsAdminComponent },
 
 

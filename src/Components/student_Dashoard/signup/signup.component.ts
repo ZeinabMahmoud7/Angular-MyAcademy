@@ -110,7 +110,9 @@ constructor(private userData:UserDataService,private router:Router,private cours
     name:FormValue.Name as string,
     email:FormValue.Email as string,
     courseName:FormValue.courseName as string,
-    studentId:Number(FormValue.StudentId)
+    studentId:Number(FormValue.StudentId),
+    score: "didn't take any exam"
+
   }
 
   alert("Registered Successfully")

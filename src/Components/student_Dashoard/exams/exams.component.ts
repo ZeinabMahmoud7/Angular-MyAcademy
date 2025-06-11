@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { FormService } from '../../services/form.service';
 import { Router } from '@angular/router';
+import { UserDataService } from '../../services/user-data.service';
 
 @Component({
   selector: 'app-exams',
@@ -22,7 +23,7 @@ export class ExamsComponent implements OnInit {
   formQuestion: FormGroup = new FormGroup({});
   isLoaded: boolean = false;
 
-  constructor(private route: ActivatedRoute, private courseService: CourrsesService, private formData: FormService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private courseService: CourrsesService, private userData: UserDataService, private router: Router) { }
 
   ngOnInit(): void {
     this.examId = Number(this.route.snapshot.paramMap.get('id'));
@@ -56,7 +57,7 @@ export class ExamsComponent implements OnInit {
         const correctAnswer = question.correctAnswer;
         if (userAnswer == correctAnswer)
           correctCount++;
-        this.formData.setScore(correctCount);
+        this.userData.setScore(correctCount);
       });
       this.router.navigate(['/result']);
 

@@ -18,5 +18,17 @@ export class UserDataService {
   getUserData(): Observable<Iuser> {
     return this.http.get<Iuser>(this.apiUrl)
   }
+  private score: number = 0;
+
+  setScore(score: number) {
+   return this.score = score;
+  }
+
+  getScore(): number {
+    return this.score;
+  }
+  updateUserData(user: Iuser): Observable<Iuser> {
+  return this.http.put<Iuser>(`http://localhost:3000/users/${user.studentId}`, user);
+}
 
 }
