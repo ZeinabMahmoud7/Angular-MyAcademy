@@ -1,6 +1,6 @@
 <div class="form-wrapper">
   <div class="form-container container">
-    <h2 class="text-center mb-4">Edit Exam</h2>
+    <h2 class="text-center mb-4">{{ examId === 0 ? 'Add Exam' : 'Edit Exam' }}</h2>
     <form [formGroup]="formData" (ngSubmit)="onSubmit()">
       <div class="row justify-content-center">
         <div class="mb-3 col-lg-4">
@@ -44,7 +44,7 @@
         <div class="col-lg-4">
           <button type="submit" class="btn w-100 py-2 fs-5 rounded-pill shadow">
             <i class="bi bi-save me-2"></i>
-            Edit Exam
+            {{ examId === 0 ? 'Save Exam' : 'Edit Exam' }}
           </button>
         </div>
       </div>

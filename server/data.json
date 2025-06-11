@@ -125,7 +125,7 @@
                 }
               ],
               "examTime": 10,
-              "difficulty": "medium",
+              "difficulty": "hard",
               "numberOfQuestions": 10,
               "time": 30
             },
@@ -507,130 +507,7 @@
         {
           "id": 1,
           "title": "UI Design",
-          "exams": [
-            {
-              "id": 1,
-              "title": "Html",
-              "available": true,
-              "questions": [
-                {
-                  "id": 1,
-                  "text": "Question 1 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option D"
-                },
-                {
-                  "id": 2,
-                  "text": "Question 2 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 3,
-                  "text": "Question 3 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 4,
-                  "text": "Question 4 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 5,
-                  "text": "Question 5 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 6,
-                  "text": "Question 6 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 7,
-                  "text": "Question 7 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 8,
-                  "text": "Question 8 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 9,
-                  "text": "Question 9 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option D"
-                },
-                {
-                  "id": 10,
-                  "text": "Question 10 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                }
-              ],
-              "examTime": 10,
-              "difficulty": "medium",
-              "numberOfQuestions": 10,
-              "Available": true,
-              "time": 10
-            }
-          ]
+          "exams": []
         },
         {
           "id": 2,

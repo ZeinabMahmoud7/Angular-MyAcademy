@@ -2,7 +2,7 @@
 <div class="card-body" *ngFor="let question of questions; let i=index">
   <div class="d-flex flex-row gap-3 align-items-center mb-3 flex-wrap">
 
-    <h5 class="card-title mb-0 col-12 col-md-auto">{{i+1}}-{{question.question}}</h5>
+    <h5 class="card-title mb-0 col-12 col-md-auto">{{i+1}}-{{question.text}}</h5>
 
     <button class="btn btn-outline-primary btn-sm rounded-pill ms-md-auto col-2"
     [queryParams]="{ trackId: trackId, courseId: courseId ,questionId:question.id }"
