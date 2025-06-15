@@ -637,7 +637,7 @@
             },
             {
               "id": 2,
-              "title": "Wireframing Basics",
+              "title": "wwss",
               "available": false,
               "questions": [
                 {
@@ -752,8 +752,10 @@
                 }
               ],
               "examTime": 10,
-              "difficulty": "medium",
-              "numberOfQuestions": 10
+              "difficulty": "hard",
+              "numberOfQuestions": 10,
+              "Available": "false",
+              "time": 30
             }
           ]
         }
@@ -845,6 +847,22 @@
       "id": "ea82",
       "name": "shimaa",
       "email": "shy@gmail.com",
+      "courseName": "1",
+      "studentId": 1,
+      "score": "didn't take any exam"
+    },
+    {
+      "id": "d7ee",
+      "name": "sara",
+      "email": "sara@gmail.com",
+      "courseName": "1",
+      "studentId": 1,
+      "score": 4
+    },
+    {
+      "id": "9893",
+      "name": "shimaa",
+      "email": "shym@gm.com",
       "courseName": "1",
       "studentId": 1,
       "score": "didn't take any exam"
