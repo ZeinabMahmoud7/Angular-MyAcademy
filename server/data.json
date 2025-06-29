@@ -866,6 +866,14 @@
       "courseName": "1",
       "studentId": 1,
       "score": "didn't take any exam"
+    },
+    {
+      "id": "197d",
+      "name": "shimaa",
+      "email": "shyma0448@gmail.com",
+      "courseName": "1",
+      "studentId": 1,
+      "score": 3
     }
   ]
 }
