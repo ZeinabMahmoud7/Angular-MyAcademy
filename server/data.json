@@ -1,879 +1,154 @@
 {
-  "courses": [
+  "exams": [
     {
-      "id": "1",
-      "title": "Web Development",
-      "tracks": [
+      "id": 1,
+      "title": "Node.js",
+      "available": true,
+      "completed": false,
+      "examTime": 10,
+      "difficulty": "medium",
+      "numberOfQuestions": 10,
+      "time": 20,
+      "questions": [
         {
           "id": 1,
-          "title": "Frontend",
-          "exams": [
-            {
-              "id": 2,
-              "title": "Css",
-              "Available": "false",
-              "questions": [
-                {
-                  "id": 1,
-                  "text": "Question 1 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 2,
-                  "text": "Question 2 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 3,
-                  "text": "Question 3 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 4,
-                  "text": "Question 4 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 5,
-                  "text": "Question 5 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 6,
-                  "text": "Question 6 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 7,
-                  "text": "Question 7 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 8,
-                  "text": "Question 8 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 9,
-                  "text": "Question 9 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 10,
-                  "text": "Question 10 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option D"
-                }
-              ],
-              "examTime": 10,
-              "difficulty": "hard",
-              "numberOfQuestions": 10,
-              "time": 30
-            },
-            {
-              "id": 3,
-              "title": "Javascript",
-              "Available": "true",
-              "questions": [
-                {
-                  "id": 1,
-                  "text": "Question 1 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 2,
-                  "text": "Question 2 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 3,
-                  "text": "Question 3 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 4,
-                  "text": "Question 4 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 5,
-                  "text": "Question 5 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 6,
-                  "text": "Question 6 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option D"
-                },
-                {
-                  "id": 7,
-                  "text": "Question 7 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option D"
-                },
-                {
-                  "id": 8,
-                  "text": "Question 8 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 9,
-                  "text": "Question 9 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 10,
-                  "text": "Question 10 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                }
-              ],
-              "examTime": 10,
-              "difficulty": "medium",
-              "numberOfQuestions": 10,
-              "time": 30
-            }
-          ]
+          "text": "What is Node.js primarily used for?",
+          "options": ["Frontend development", "Server-side scripting", "Mobile apps", "Databases"],
+          "correctAnswer": "Server-side scripting"
         },
         {
           "id": 2,
-          "title": "Backend",
-          "exams": [
-            {
-              "id": 1,
-              "title": "Node.js",
-              "Available": true,
-              "questions": [
-                {
-                  "id": 1,
-                  "text": "What does HTML stand for?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 2,
-                  "text": "Question 2 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 3,
-                  "text": "Question 3 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 4,
-                  "text": "Question 4 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 5,
-                  "text": "Question 5 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 6,
-                  "text": "Question 6 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 7,
-                  "text": "Question 7 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 8,
-                  "text": "Question 8 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 9,
-                  "text": "Question 9 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option D"
-                },
-                {
-                  "id": 10,
-                  "text": "Question 10 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                }
-              ],
-              "examTime": 10,
-              "difficulty": "medium",
-              "numberOfQuestions": 10
-            },
-            {
-              "id": 2,
-              "title": "DataBase",
-              "Available": false,
-              "questions": [
-                {
-                  "id": 1,
-                  "text": "Question 1 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 2,
-                  "text": "Question 2 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 3,
-                  "text": "Question 3 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 4,
-                  "text": "Question 4 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option D"
-                },
-                {
-                  "id": 5,
-                  "text": "Question 5 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 6,
-                  "text": "Question 6 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 7,
-                  "text": "Question 7 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 8,
-                  "text": "Question 8 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 9,
-                  "text": "Question 9 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 10,
-                  "text": "Question 10 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                }
-              ],
-              "examTime": 10,
-              "difficulty": "medium",
-              "numberOfQuestions": 10
-            }
-          ]
+          "text": "Which module is used to work with file systems in Node.js?",
+          "options": ["fs", "http", "url", "path"],
+          "correctAnswer": "fs"
+        },
+        {
+          "id": 3,
+          "text": "What command is used to install a package locally?",
+          "options": ["npm install package-name", "npm global install package-name", "install package-name", "node install package-name"],
+          "correctAnswer": "npm install package-name"
+        },
+        {
+          "id": 4,
+          "text": "What is 'package.json' used for?",
+          "options": ["List project dependencies", "Run Node server", "Connect to database", "Compile code"],
+          "correctAnswer": "List project dependencies"
+        },
+        {
+          "id": 5,
+          "text": "Which statement is true about Node.js?",
+          "options": ["It runs in the browser", "It is synchronous by default", "It is built on Chrome's V8 engine", "It uses Java"],
+          "correctAnswer": "It is built on Chrome's V8 engine"
+        },
+        {
+          "id": 6,
+          "text": "Which function is used to include external modules in Node.js?",
+          "options": ["include()", "import()", "require()", "load()"],
+          "correctAnswer": "require()"
+        },
+        {
+          "id": 7,
+          "text": "How do you export a module in Node.js?",
+          "options": ["export myFunc", "module.exports = myFunc", "require.myFunc", "module.myFunc"],
+          "correctAnswer": "module.exports = myFunc"
+        },
+        {
+          "id": 8,
+          "text": "What is the default scope in Node.js for variables?",
+          "options": ["Global", "Function", "Block", "Module"],
+          "correctAnswer": "Module"
+        },
+        {
+          "id": 9,
+          "text": "Which event is emitted when a stream is finished?",
+          "options": ["done", "end", "finish", "close"],
+          "correctAnswer": "end"
+        },
+        {
+          "id": 10,
+          "text": "Which of these is NOT a core module in Node.js?",
+          "options": ["os", "events", "express", "buffer"],
+          "correctAnswer": "express"
         }
       ]
     },
     {
-      "id": "2",
-      "title": "Design",
-      "tracks": [
+      "id": 2,
+      "title": "JavaScript Basics",
+      "available": true,
+      "completed": false,
+      "examTime": 10,
+      "difficulty": "easy",
+      "numberOfQuestions": 10,
+      "time": 15,
+      "questions": [
         {
           "id": 1,
-          "title": "UI Design",
-          "exams": []
+          "text": "Which keyword is used to declare a variable in JavaScript?",
+          "options": ["int", "let", "var", "Both B and C"],
+          "correctAnswer": "Both B and C"
         },
         {
           "id": 2,
-          "title": "UX Research",
-          "exams": [
-            {
-              "id": 1,
-              "title": "Node.js",
-              "available": true,
-              "questions": [
-                {
-                  "id": 1,
-                  "text": "Question 1 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 2,
-                  "text": "Question 2 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 3,
-                  "text": "Question 3 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 4,
-                  "text": "Question 4 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option D"
-                },
-                {
-                  "id": 5,
-                  "text": "Question 5 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 6,
-                  "text": "Question 6 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 7,
-                  "text": "Question 7 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 8,
-                  "text": "Question 8 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 9,
-                  "text": "Question 9 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 10,
-                  "text": "Question 10 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                }
-              ],
-              "examTime": 10,
-              "difficulty": "medium",
-              "numberOfQuestions": 10,
-              "Available": true,
-              "time": 30
-            },
-            {
-              "id": 2,
-              "title": "wwss",
-              "available": false,
-              "questions": [
-                {
-                  "id": 1,
-                  "text": "Question 1 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 2,
-                  "text": "Question 2 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 3,
-                  "text": "Question 3 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option B"
-                },
-                {
-                  "id": 4,
-                  "text": "Question 4 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 5,
-                  "text": "Question 5 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 6,
-                  "text": "Question 6 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option C"
-                },
-                {
-                  "id": 7,
-                  "text": "Question 7 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 8,
-                  "text": "Question 8 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option A"
-                },
-                {
-                  "id": 9,
-                  "text": "Question 9 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option D"
-                },
-                {
-                  "id": 10,
-                  "text": "Question 10 text?",
-                  "options": [
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D"
-                  ],
-                  "correctAnswer": "Option D"
-                }
-              ],
-              "examTime": 10,
-              "difficulty": "hard",
-              "numberOfQuestions": 10,
-              "Available": "false",
-              "time": 30
-            }
-          ]
+          "text": "Which symbol is used for single-line comments?",
+          "options": ["//", "/*", "#", "<!--"],
+          "correctAnswer": "//"
+        },
+        {
+          "id": 3,
+          "text": "What is the output of 'typeof []'?",
+          "options": ["array", "object", "undefined", "list"],
+          "correctAnswer": "object"
+        },
+        {
+          "id": 4,
+          "text": "What is 'NaN' in JavaScript?",
+          "options": ["A function", "A string", "Not a Number", "Null"],
+          "correctAnswer": "Not a Number"
+        },
+        {
+          "id": 5,
+          "text": "Which function converts a string to an integer?",
+          "options": ["parseInt()", "parseFloat()", "Number()", "Math.floor()"],
+          "correctAnswer": "parseInt()"
+        },
+        {
+          "id": 6,
+          "text": "Which method adds one or more elements to the end of an array?",
+          "options": ["push()", "pop()", "shift()", "unshift()"],
+          "correctAnswer": "push()"
+        },
+        {
+          "id": 7,
+          "text": "How do you write an arrow function?",
+          "options": ["function() => {}", "() => {}", "=> function() {}", "function => ()"],
+          "correctAnswer": "() => {}"
+        },
+        {
+          "id": 8,
+          "text": "What is the result of '2' + 2 in JavaScript?",
+          "options": ["4", "22", "NaN", "undefined"],
+          "correctAnswer": "22"
+        },
+        {
+          "id": 9,
+          "text": "Which statement checks if two values are equal and of the same type?",
+          "options": ["==", "===", "!=", "!=="],
+          "correctAnswer": "==="
+        },
+        {
+          "id": 10,
+          "text": "What is a callback function?",
+          "options": [
+            "A function that calls itself",
+            "A function passed as an argument to another function",
+            "A built-in function",
+            "A function that is called before another function"
+          ],
+          "correctAnswer": "A function passed as an argument to another function"
         }
       ]
     }
   ],
-  "user": [
-    {
-      "id": "1",
-      "studentId": 1,
-      "name": "Ahmed",
-      "email": "ahmed@example.com",
-      "courseName": "Math",
-      "score": "didn't take any exam"
-    },
-    {
-      "id": "6489",
-      "name": "shimaa",
-      "email": "shyma0448@gmail.com",
-      "courseName": "2",
-      "studentId": 1,
-      "score": "didn't take any exam"
-    },
-    {
-      "id": "73ca",
-      "name": "shimaa",
-      "email": "shyma0@gmail.com",
-      "courseName": "1",
-      "studentId": 1,
-      "score": "didn't take any exam"
-    },
-    {
-      "id": "5cd4",
-      "name": "sds",
-      "email": "sds@gmail.com",
-      "courseName": "2",
-      "studentId": 1,
-      "score": "didn't take any exam"
-    },
-    {
-      "id": "ee4d",
-      "name": "shimaa",
-      "email": "shy@gmail.com",
-      "courseName": "1",
-      "studentId": 1,
-      "score": "didn't take any exam"
-    },
-    {
-      "id": "cb6d",
-      "name": "shi",
-      "email": "sh@gmail.c",
-      "courseName": "1",
-      "studentId": 1,
-      "score": "didn't take any exam"
-    },
-    {
-      "id": "2f6d",
-      "name": "shimaa",
-      "email": "shyma0448@gmail.com",
-      "courseName": "1",
-      "studentId": 1,
-      "score": "didn't take any exam"
-    },
-    {
-      "id": "37d0",
-      "name": "shimaa",
-      "email": "sh@gmail.com",
-      "courseName": "2",
-      "studentId": 1,
-      "score": "didn't take any exam"
-    },
-    {
-      "id": "9f87",
-      "name": "shimaa",
-      "email": "ahmed@example.com",
-      "courseName": "1",
-      "studentId": 1,
-      "score": "didn't take any exam"
-    },
-    {
-      "id": "7efb",
-      "name": "shimaa",
-      "email": "shyma@gmail.co",
-      "courseName": "1",
-      "studentId": 1,
-      "score": 3
-    },
-    {
-      "id": "ea82",
-      "name": "shimaa",
-      "email": "shy@gmail.com",
-      "courseName": "1",
-      "studentId": 1,
-      "score": "didn't take any exam"
-    },
-    {
-      "id": "d7ee",
-      "name": "sara",
-      "email": "sara@gmail.com",
-      "courseName": "1",
-      "studentId": 1,
-      "score": 4
-    },
-    {
-      "id": "9893",
-      "name": "shimaa",
-      "email": "shym@gm.com",
-      "courseName": "1",
-      "studentId": 1,
-      "score": "didn't take any exam"
-    },
-    {
-      "id": "197d",
-      "name": "shimaa",
-      "email": "shyma0448@gmail.com",
-      "courseName": "1",
-      "studentId": 1,
-      "score": 3
-    }
-  ]
+  "user": []
 }
