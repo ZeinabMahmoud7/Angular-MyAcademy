@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { CourrsesService } from '../../services/courrses.service';
-import { Iexam } from '../../student_Dashoard/module/iexam';
+import { Iexam } from '../../Shared/module/iexam';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -27,7 +26,6 @@ export class ExamFormComponent implements OnInit {
   });
 
   constructor(
-    private courseService: CourrsesService,
     private router: Router,
     private routerLink: ActivatedRoute
   ) {}
@@ -37,19 +35,7 @@ export class ExamFormComponent implements OnInit {
     this.courseId = Number(this.routerLink.snapshot.queryParamMap.get('courseId'));
     this.examId = Number(this.routerLink.snapshot.paramMap.get('id'));
 
-    if (this.examId !== 0) {
-      this.courseService.getExamById(this.examId).subscribe({
-        next: (exam) => {
-          if (exam) {
-            this.examData = exam;
-            this.formData.patchValue(exam);
-          } else {
-            alert('Exam not found');
-          }
-        },
-        error: () => alert('Failed to load exam for editing')
-      });
-    }
+
   }
 
   onSubmit(): void {
@@ -60,20 +46,9 @@ export class ExamFormComponent implements OnInit {
       };
 
       if (this.examId === 0) {
-        this.courseService.addExam(exam, this.courseId, this.trackId).subscribe({
-          next: () => {
-            alert('Exam added successfully!');
-            this.router.navigate(['/adminExam']);
-          },
-          error: () => alert('Failed to add exam.')
-        });
+
       } else {
-        this.courseService.EditExam(this.courseId, this.trackId, this.examId, exam).subscribe({
-          next: () => {
-            alert('Exam updated successfully!');
-                      },
-          error: () => alert('Failed to update exam.')
-        });
+
       }
     }
   }

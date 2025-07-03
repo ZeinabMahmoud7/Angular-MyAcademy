@@ -1,7 +1,7 @@
 {
   "exams": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Node.js",
       "available": true,
       "completed": false,
@@ -13,67 +13,117 @@
         {
           "id": 1,
           "text": "What is Node.js primarily used for?",
-          "options": ["Frontend development", "Server-side scripting", "Mobile apps", "Databases"],
+          "options": [
+            "Frontend development",
+            "Server-side scripting",
+            "Mobile apps",
+            "Databases"
+          ],
           "correctAnswer": "Server-side scripting"
         },
         {
           "id": 2,
           "text": "Which module is used to work with file systems in Node.js?",
-          "options": ["fs", "http", "url", "path"],
+          "options": [
+            "fs",
+            "http",
+            "url",
+            "path"
+          ],
           "correctAnswer": "fs"
         },
         {
           "id": 3,
           "text": "What command is used to install a package locally?",
-          "options": ["npm install package-name", "npm global install package-name", "install package-name", "node install package-name"],
+          "options": [
+            "npm install package-name",
+            "npm global install package-name",
+            "install package-name",
+            "node install package-name"
+          ],
           "correctAnswer": "npm install package-name"
         },
         {
           "id": 4,
           "text": "What is 'package.json' used for?",
-          "options": ["List project dependencies", "Run Node server", "Connect to database", "Compile code"],
+          "options": [
+            "List project dependencies",
+            "Run Node server",
+            "Connect to database",
+            "Compile code"
+          ],
           "correctAnswer": "List project dependencies"
         },
         {
           "id": 5,
           "text": "Which statement is true about Node.js?",
-          "options": ["It runs in the browser", "It is synchronous by default", "It is built on Chrome's V8 engine", "It uses Java"],
+          "options": [
+            "It runs in the browser",
+            "It is synchronous by default",
+            "It is built on Chrome's V8 engine",
+            "It uses Java"
+          ],
           "correctAnswer": "It is built on Chrome's V8 engine"
         },
         {
           "id": 6,
           "text": "Which function is used to include external modules in Node.js?",
-          "options": ["include()", "import()", "require()", "load()"],
+          "options": [
+            "include()",
+            "import()",
+            "require()",
+            "load()"
+          ],
           "correctAnswer": "require()"
         },
         {
           "id": 7,
           "text": "How do you export a module in Node.js?",
-          "options": ["export myFunc", "module.exports = myFunc", "require.myFunc", "module.myFunc"],
+          "options": [
+            "export myFunc",
+            "module.exports = myFunc",
+            "require.myFunc",
+            "module.myFunc"
+          ],
           "correctAnswer": "module.exports = myFunc"
         },
         {
           "id": 8,
           "text": "What is the default scope in Node.js for variables?",
-          "options": ["Global", "Function", "Block", "Module"],
+          "options": [
+            "Global",
+            "Function",
+            "Block",
+            "Module"
+          ],
           "correctAnswer": "Module"
         },
         {
           "id": 9,
           "text": "Which event is emitted when a stream is finished?",
-          "options": ["done", "end", "finish", "close"],
+          "options": [
+            "done",
+            "end",
+            "finish",
+            "close"
+          ],
           "correctAnswer": "end"
         },
         {
           "id": 10,
           "text": "Which of these is NOT a core module in Node.js?",
-          "options": ["os", "events", "express", "buffer"],
+          "options": [
+            "os",
+            "events",
+            "express",
+            "buffer"
+          ],
           "correctAnswer": "express"
         }
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "JavaScript Basics",
       "available": true,
       "completed": false,
@@ -85,55 +135,100 @@
         {
           "id": 1,
           "text": "Which keyword is used to declare a variable in JavaScript?",
-          "options": ["int", "let", "var", "Both B and C"],
+          "options": [
+            "int",
+            "let",
+            "var",
+            "Both B and C"
+          ],
           "correctAnswer": "Both B and C"
         },
         {
           "id": 2,
           "text": "Which symbol is used for single-line comments?",
-          "options": ["//", "/*", "#", "<!--"],
+          "options": [
+            "//",
+            "/*",
+            "#",
+            "<!--"
+          ],
           "correctAnswer": "//"
         },
         {
           "id": 3,
           "text": "What is the output of 'typeof []'?",
-          "options": ["array", "object", "undefined", "list"],
+          "options": [
+            "array",
+            "object",
+            "undefined",
+            "list"
+          ],
           "correctAnswer": "object"
         },
         {
           "id": 4,
           "text": "What is 'NaN' in JavaScript?",
-          "options": ["A function", "A string", "Not a Number", "Null"],
+          "options": [
+            "A function",
+            "A string",
+            "Not a Number",
+            "Null"
+          ],
           "correctAnswer": "Not a Number"
         },
         {
           "id": 5,
           "text": "Which function converts a string to an integer?",
-          "options": ["parseInt()", "parseFloat()", "Number()", "Math.floor()"],
+          "options": [
+            "parseInt()",
+            "parseFloat()",
+            "Number()",
+            "Math.floor()"
+          ],
           "correctAnswer": "parseInt()"
         },
         {
           "id": 6,
           "text": "Which method adds one or more elements to the end of an array?",
-          "options": ["push()", "pop()", "shift()", "unshift()"],
+          "options": [
+            "push()",
+            "pop()",
+            "shift()",
+            "unshift()"
+          ],
           "correctAnswer": "push()"
         },
         {
           "id": 7,
           "text": "How do you write an arrow function?",
-          "options": ["function() => {}", "() => {}", "=> function() {}", "function => ()"],
+          "options": [
+            "function() => {}",
+            "() => {}",
+            "=> function() {}",
+            "function => ()"
+          ],
           "correctAnswer": "() => {}"
         },
         {
           "id": 8,
           "text": "What is the result of '2' + 2 in JavaScript?",
-          "options": ["4", "22", "NaN", "undefined"],
+          "options": [
+            "4",
+            "22",
+            "NaN",
+            "undefined"
+          ],
           "correctAnswer": "22"
         },
         {
           "id": 9,
           "text": "Which statement checks if two values are equal and of the same type?",
-          "options": ["==", "===", "!=", "!=="],
+          "options": [
+            "==",
+            "===",
+            "!=",
+            "!=="
+          ],
           "correctAnswer": "==="
         },
         {
@@ -148,7 +243,382 @@
           "correctAnswer": "A function passed as an argument to another function"
         }
       ]
+    },
+    {
+      "id": "3",
+      "title": "HTML & CSS",
+      "available": true,
+      "completed": false,
+      "examTime": 10,
+      "difficulty": "easy",
+      "numberOfQuestions": 10,
+      "time": 15,
+      "questions": [
+        {
+          "id": 1,
+          "text": "What does HTML stand for?",
+          "options": [
+            "Hyper Trainer Marking Language",
+            "Hyper Text Markup Language",
+            "Hyper Text Marketing Language",
+            "Hyper Text Markdown Language"
+          ],
+          "correctAnswer": "Hyper Text Markup Language"
+        },
+        {
+          "id": 2,
+          "text": "Which HTML tag is used to define an image?",
+          "options": [
+            "<img>",
+            "<image>",
+            "<pic>",
+            "<src>"
+          ],
+          "correctAnswer": "<img>"
+        },
+        {
+          "id": 3,
+          "text": "Which property is used in CSS to change text color?",
+          "options": [
+            "font-color",
+            "text-color",
+            "color",
+            "background-color"
+          ],
+          "correctAnswer": "color"
+        },
+        {
+          "id": 4,
+          "text": "What is the correct HTML element for inserting a line break?",
+          "options": [
+            "<break>",
+            "<br>",
+            "<lb>",
+            "<line>"
+          ],
+          "correctAnswer": "<br>"
+        },
+        {
+          "id": 5,
+          "text": "Which CSS property controls the text size?",
+          "options": [
+            "font-style",
+            "text-size",
+            "font-size",
+            "text-style"
+          ],
+          "correctAnswer": "font-size"
+        },
+        {
+          "id": 6,
+          "text": "How do you make a list that lists items with numbers?",
+          "options": [
+            "<ol>",
+            "<ul>",
+            "<dl>",
+            "<list>"
+          ],
+          "correctAnswer": "<ol>"
+        },
+        {
+          "id": 7,
+          "text": "What does CSS stand for?",
+          "options": [
+            "Cascading Style Sheets",
+            "Colorful Style Sheets",
+            "Computer Style Sheets",
+            "Creative Style Sheets"
+          ],
+          "correctAnswer": "Cascading Style Sheets"
+        },
+        {
+          "id": 8,
+          "text": "Which is the correct CSS syntax?",
+          "options": [
+            "{body:color=black;}",
+            "body {color: black;}",
+            "body = {color: black;}",
+            "{body;color:black;}"
+          ],
+          "correctAnswer": "body {color: black;}"
+        },
+        {
+          "id": 9,
+          "text": "How do you add a background color in CSS?",
+          "options": [
+            "background-color: red;",
+            "bg-color: red;",
+            "color-background: red;",
+            "background: red-color;"
+          ],
+          "correctAnswer": "background-color: red;"
+        },
+        {
+          "id": 10,
+          "text": "Which HTML tag is used to make text bold?",
+          "options": [
+            "<strong>",
+            "<b>",
+            "<bold>",
+            "<text-bold>"
+          ],
+          "correctAnswer": "<b>"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "React.js Fundamentals",
+      "available": true,
+      "completed": false,
+      "examTime": 15,
+      "difficulty": "medium",
+      "numberOfQuestions": 10,
+      "time": 20,
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is the purpose of React?",
+          "options": [
+            "To style HTML",
+            "To manage databases",
+            "To build user interfaces",
+            "To handle backend logic"
+          ],
+          "correctAnswer": "To build user interfaces"
+        },
+        {
+          "id": 2,
+          "text": "Which method is used to create components in React?",
+          "options": [
+            "React.component()",
+            "ReactDOM.create()",
+            "React.createComponent()",
+            "React.Component"
+          ],
+          "correctAnswer": "React.Component"
+        },
+        {
+          "id": 3,
+          "text": "What is JSX?",
+          "options": [
+            "JavaScript XML",
+            "JavaScript Extension",
+            "JSON Extension",
+            "JS Editor"
+          ],
+          "correctAnswer": "JavaScript XML"
+        },
+        {
+          "id": 4,
+          "text": "Which hook is used to manage state in a functional component?",
+          "options": [
+            "useEffect",
+            "useState",
+            "useReducer",
+            "useContext"
+          ],
+          "correctAnswer": "useState"
+        },
+        {
+          "id": 5,
+          "text": "Which command creates a new React app?",
+          "options": [
+            "npm install react",
+            "npx create-react-app my-app",
+            "npm start react",
+            "react init my-app"
+          ],
+          "correctAnswer": "npx create-react-app my-app"
+        },
+        {
+          "id": 6,
+          "text": "Which of the following is a valid component name?",
+          "options": [
+            "header",
+            "HeaderComponent",
+            "header-component",
+            "componentHeader"
+          ],
+          "correctAnswer": "HeaderComponent"
+        },
+        {
+          "id": 7,
+          "text": "What does the useEffect hook do?",
+          "options": [
+            "Manages routing",
+            "Performs side effects in function components",
+            "Updates props",
+            "Creates context"
+          ],
+          "correctAnswer": "Performs side effects in function components"
+        },
+        {
+          "id": 8,
+          "text": "Which package is used for routing in React?",
+          "options": [
+            "react-router-dom",
+            "react-navigation",
+            "react-dom-router",
+            "router-react"
+          ],
+          "correctAnswer": "react-router-dom"
+        },
+        {
+          "id": 9,
+          "text": "Props in React are:",
+          "options": [
+            "Mutable",
+            "Read-only",
+            "Used for styling",
+            "Functions only"
+          ],
+          "correctAnswer": "Read-only"
+        },
+        {
+          "id": 10,
+          "text": "What is the virtual DOM?",
+          "options": [
+            "An API for DOM manipulation",
+            "A copy of the real DOM kept in memory",
+            "A new browser feature",
+            "A real DOM element"
+          ],
+          "correctAnswer": "A copy of the real DOM kept in memory"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "MongoDB Basics",
+      "available": true,
+      "completed": false,
+      "examTime": 10,
+      "difficulty": "medium",
+      "numberOfQuestions": 10,
+      "time": 15,
+      "questions": [
+        {
+          "id": 1,
+          "text": "What type of database is MongoDB?",
+          "options": [
+            "Relational",
+            "Graph-based",
+            "Document-oriented",
+            "Key-value"
+          ],
+          "correctAnswer": "Document-oriented"
+        },
+        {
+          "id": 2,
+          "text": "Which command is used to show all databases?",
+          "options": [
+            "show all",
+            "show databases",
+            "list dbs",
+            "get databases"
+          ],
+          "correctAnswer": "show databases"
+        },
+        {
+          "id": 3,
+          "text": "What is the default port MongoDB listens on?",
+          "options": [
+            "27017",
+            "8080",
+            "3306",
+            "5432"
+          ],
+          "correctAnswer": "27017"
+        },
+        {
+          "id": 4,
+          "text": "Which method is used to insert one document?",
+          "options": [
+            "insertAll()",
+            "addOne()",
+            "insertOne()",
+            "save()"
+          ],
+          "correctAnswer": "insertOne()"
+        },
+        {
+          "id": 5,
+          "text": "Which data format does MongoDB use to store documents?",
+          "options": [
+            "CSV",
+            "XML",
+            "JSON",
+            "BSON"
+          ],
+          "correctAnswer": "BSON"
+        },
+        {
+          "id": 6,
+          "text": "Which function finds all documents in a collection?",
+          "options": [
+            "find()",
+            "select()",
+            "getAll()",
+            "fetch()"
+          ],
+          "correctAnswer": "find()"
+        },
+        {
+          "id": 7,
+          "text": "What is a collection in MongoDB?",
+          "options": [
+            "A group of SQL tables",
+            "A set of key-value pairs",
+            "A group of related documents",
+            "A single record"
+          ],
+          "correctAnswer": "A group of related documents"
+        },
+        {
+          "id": 8,
+          "text": "Which operator is used for greater than in queries?",
+          "options": [
+            "$gt",
+            "$gte",
+            "$greater",
+            "$more"
+          ],
+          "correctAnswer": "$gt"
+        },
+        {
+          "id": 9,
+          "text": "How do you delete a document?",
+          "options": [
+            "remove()",
+            "delete()",
+            "deleteOne()",
+            "drop()"
+          ],
+          "correctAnswer": "deleteOne()"
+        },
+        {
+          "id": 10,
+          "text": "Which of the following is a valid MongoDB data type?",
+          "options": [
+            "float",
+            "number",
+            "double",
+            "decimal"
+          ],
+          "correctAnswer": "double"
+        }
+      ]
     }
   ],
-  "user": []
+  "user": [
+    {
+      "id": "c7d8",
+      "name": "shymaa Adel",
+      "email": "shyma0448@gmail.com",
+      "password": "123456",
+      "studentId": 1,
+      "score": "didn't take any exam"
+    }
+  ]
 }

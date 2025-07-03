@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CourrsesService } from '../../services/courrses.service';
 import { ActivatedRoute, Router, RouterLink, RouterModule } from '@angular/router';
-import { UserDataService } from '../../services/user-data.service';
-import { Iuser } from '../module/iuser';
+import { Iuser } from '../../Shared/module/iuser';
+import { UserDataService } from '../../Shared/services/user-data.service';
 
 @Component({
   selector: 'app-result',
@@ -33,7 +32,7 @@ export class ResultComponent implements OnInit {
             console.log('Score saved to database');
             this.score = this.data.score;
           },
-          error: err => console.error('Error saving score', err)
+          error: (err:any) => console.error('Error saving score', err)
         });
       } else {
         this.score = this.data.score;

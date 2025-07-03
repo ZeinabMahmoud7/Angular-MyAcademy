@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserDataService } from '../../services/user-data.service';
-import { Iuser } from '../../student_Dashoard/module/iuser';
+import { Iuser } from '../../Shared/module/iuser';
 import { CommonModule } from '@angular/common';
+import { UserDataService } from '../../Shared/services/user-data.service';
 
 @Component({
   selector: 'app-student-results',

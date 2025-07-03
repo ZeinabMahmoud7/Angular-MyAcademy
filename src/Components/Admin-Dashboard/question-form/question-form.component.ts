@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CourrsesService } from '../../services/courrses.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -17,7 +16,6 @@ export class QuestionFormComponent implements OnInit {
   courseId: any
   questionId:any
   constructor(private activeRoute: ActivatedRoute,
-              private courseService: CourrsesService,
               private route:Router) {}
   ngOnInit(): void {
     this.examId = this.activeRoute.snapshot.paramMap.get('id')
@@ -25,22 +23,11 @@ export class QuestionFormComponent implements OnInit {
     this.questionId = this.activeRoute.snapshot.queryParamMap.get('questionId')
     this.trackId = this.activeRoute.snapshot.queryParamMap.get('trackId')
 
-    this.courseService.getQuestionDetails(this.courseId,this.trackId,this.examId,this.questionId).subscribe({
-       next:(data)=>{this.question=data
-       }
-    })
+
 
   }
   onSubmit() {
-  this.courseService.editQuistion(Number(this.trackId), Number(this.courseId),Number(this.examId),Number(this.questionId),this.question).subscribe({
-    next: () => {
-      alert('Edited Successfully');
-      this.route.navigate(['/examQuestionsAdmin',this.questionId],
-       { queryParams: { trackId: this.trackId, courseId: this.courseId } }
-      )
-    },
 
-  });
 }
 
 
