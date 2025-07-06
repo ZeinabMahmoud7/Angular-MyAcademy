@@ -5,10 +5,8 @@ import { ResultComponent } from '../Components/student_Dashoard/result/result.co
 import { ForwardComponent } from '../Components/student_Dashoard/forward/forward.component';
 import { SignUpComponent } from '../Components/Shared/signup/signup.component';
 import { ExamFormComponent } from '../Components/Admin-Dashboard/exam-form/exam-form.component';
-import { AdminExamComponent } from '../Components/Admin-Dashboard/admin-exam/admin-exam.component';
 import { ExamGestionsAdminComponent } from '../Components/Admin-Dashboard/gestions-admin/gestions-admin.component';
 import { QuestionFormComponent } from '../Components/Admin-Dashboard/question-form/question-form.component';
-import { AddGuestionFormComponent } from '../Components/Admin-Dashboard/add-guestion-form/add-guestion-form.component';
 import { StudentResultsComponent } from '../Components/Admin-Dashboard/student-results/student-results.component';
 import { AllExamsComponent } from '../Components/student_Dashoard/all-exams/all-exams.component';
 import { ExamComponent } from '../Components/student_Dashoard/exam/exam.component';
@@ -21,10 +19,8 @@ export const routes: Routes = [
   { path: 'exam/:id', component: ExamComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'result', component: ResultComponent },
-  { path: 'adminExam', component:AdminExamComponent },
   { path: 'examForm/:id', component: ExamFormComponent },
   { path: 'questionForm/:id', component: QuestionFormComponent },
-  { path: 'questionFormAdd', component: AddGuestionFormComponent },
   { path: 'userResults', component: StudentResultsComponent },
 
   { path: 'examQuestionsAdmin/:id', component: ExamGestionsAdminComponent },

@@ -26,7 +26,7 @@ export class ExamComponent implements OnInit {
     private examService: ExamService,
     private route: ActivatedRoute,
     private fb: FormBuilder
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.examId = +this.route.snapshot.paramMap.get('id')!;
@@ -65,6 +65,8 @@ export class ExamComponent implements OnInit {
   }
 
   nextQuestion() {
+
+
     if (this.currentQuestionIndex < this.examDetails.questions.length - 1) {
       this.currentQuestionIndex++;
     }
@@ -76,14 +78,46 @@ export class ExamComponent implements OnInit {
     }
   }
 
-  onSubmit() {
-    clearInterval(this.intervalId);
-    if (this.formQuestion.valid) {
-      console.log('Submitted:', this.formQuestion.value);
-      alert('Exam submitted successfully!');
-    } else {
-      alert('Please answer all questions.');
-      this.formQuestion.markAllAsTouched();
-    }
+onSubmit() {
+  clearInterval(this.intervalId);
+
+  if (this.formQuestion.valid) {
+    let correctCount = 0;
+    const answersResult: {
+      questionId: number;
+      userAnswer: string;
+      correctAnswer: string;
+      isCorrect: boolean;
+    }[] = [];
+
+    this.examDetails.questions.forEach((question: { correctAnswer: any; id: any; }, index: string) => {
+      const controlName = 'question_' + index;
+      const userAnswer = this.formQuestion.get(controlName)?.value;
+      const correctAnswer = question.correctAnswer;
+
+      const isCorrect = userAnswer === correctAnswer;
+      if (isCorrect) correctCount++;
+
+      answersResult.push({
+        questionId: question.id,
+        userAnswer,
+        correctAnswer,
+        isCorrect
+      });
+    });
+
+    console.log('Answers:', answersResult);
+    console.log(`Total Correct Answers: ${correctCount} out of ${this.examDetails.questions.length}`);
+
+    alert(`Exam submitted successfully!\nCorrect Answers: ${correctCount}/${this.examDetails.questions.length}`);
+
+    // 👉 هنا ممكن تبعتي الإجابات للسيرفر لو حابة
+    // this.examService.submitAnswers(answersResult).subscribe(...);
+
+  } else {
+    alert('Please answer all questions.');
+    this.formQuestion.markAllAsTouched();
   }
+}
+
 }
