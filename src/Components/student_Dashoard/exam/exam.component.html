@@ -3,7 +3,9 @@
     <div
       class="p-3 rounded-top-end rounded-top-start"
       style="background-color: #EAF5F2; border: none; border-top-left-radius: 1rem; border-top-right-radius: 1rem;">
-      <h5 class="mb-0">Practice Questions</h5>
+      <h5 class="mb-2">Practice Questions</h5>
+              <Span class="mb-3">  Question {{currentQuestionIndex+1}} Of {{examDetails.questions.length}} </Span>
+
     </div>
     <div class="text-end text-danger fw-bold px-3 pt-2">
   Time Left: {{ timeLeft * 1000 | date:'mm:ss':'UTC' }}
