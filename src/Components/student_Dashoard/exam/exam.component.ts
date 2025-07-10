@@ -65,8 +65,6 @@ export class ExamComponent implements OnInit {
   }
 
   nextQuestion() {
-
-
     if (this.currentQuestionIndex < this.examDetails.questions.length - 1) {
       this.currentQuestionIndex++;
     }
@@ -111,8 +109,7 @@ onSubmit() {
 
     alert(`Exam submitted successfully!\nCorrect Answers: ${correctCount}/${this.examDetails.questions.length}`);
 
-    // 👉 هنا ممكن تبعتي الإجابات للسيرفر لو حابة
-    // this.examService.submitAnswers(answersResult).subscribe(...);
+
 
   } else {
     alert('Please answer all questions.');
