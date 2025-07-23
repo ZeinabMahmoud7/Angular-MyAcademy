@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Iexam } from '../../Shared/module/iexam';
 import { FormBuilder, FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { UserDataService } from '../../Shared/services/user-data.service'; // ✅ استيراد الخدمة
 
 @Component({
   selector: 'app-exam',
@@ -12,7 +13,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './exam.component.html',
   styleUrl: './exam.component.css',
 })
-
 export class ExamComponent implements OnInit {
   examId!: number;
   examDetails!: Iexam;
@@ -25,8 +25,9 @@ export class ExamComponent implements OnInit {
   constructor(
     private examService: ExamService,
     private route: ActivatedRoute,
-    private fb: FormBuilder
-  ) { }
+    private fb: FormBuilder,
+    private userDataService: UserDataService // ✅ حقن الخدمة
+  ) {}
 
   ngOnInit(): void {
     this.examId = +this.route.snapshot.paramMap.get('id')!;
@@ -76,45 +77,43 @@ export class ExamComponent implements OnInit {
     }
   }
 
-onSubmit() {
-  clearInterval(this.intervalId);
+  onSubmit() {
+    clearInterval(this.intervalId);
 
-  if (this.formQuestion.valid) {
-    let correctCount = 0;
-    const answersResult: {
-      questionId: number;
-      userAnswer: string;
-      correctAnswer: string;
-      isCorrect: boolean;
-    }[] = [];
+    if (this.formQuestion.valid) {
+      let correctCount = 0;
+      const answersResult: {
+        questionId: number;
+        userAnswer: string;
+        correctAnswer: string;
+        isCorrect: boolean;
+      }[] = [];
 
-    this.examDetails.questions.forEach((question: { correctAnswer: any; id: any; }, index: string) => {
-      const controlName = 'question_' + index;
-      const userAnswer = this.formQuestion.get(controlName)?.value;
-      const correctAnswer = question.correctAnswer;
+      this.examDetails.questions.forEach((question: { correctAnswer: any; id: any; }, index: string) => {
+        const controlName = 'question_' + index;
+        const userAnswer = this.formQuestion.get(controlName)?.value;
+        const correctAnswer = question.correctAnswer;
 
-      const isCorrect = userAnswer === correctAnswer;
-      if (isCorrect) correctCount++;
+        const isCorrect = userAnswer === correctAnswer;
+        if (isCorrect) correctCount++;
 
-      answersResult.push({
-        questionId: question.id,
-        userAnswer,
-        correctAnswer,
-        isCorrect
+        answersResult.push({
+          questionId: question.id,
+          userAnswer,
+          correctAnswer,
+          isCorrect
+        });
       });
-    });
 
-    console.log('Answers:', answersResult);
-    console.log(`Total Correct Answers: ${correctCount} out of ${this.examDetails.questions.length}`);
+      // ✅ حفظ السكور في الخدمة
+      this.userDataService.setScore(correctCount);
 
-    alert(`Exam submitted successfully!\nCorrect Answers: ${correctCount}/${this.examDetails.questions.length}`);
-
-
-
-  } else {
-    alert('Please answer all questions.');
-    this.formQuestion.markAllAsTouched();
+      console.log('Answers:', answersResult);
+      console.log(`Total Correct Answers: ${correctCount} out of ${this.examDetails.questions.length}`);
+      alert(`Exam submitted successfully!\nCorrect Answers: ${correctCount}/${this.examDetails.questions.length}`);
+    } else {
+      alert('Please answer all questions.');
+      this.formQuestion.markAllAsTouched();
+    }
   }
-}
-
 }
