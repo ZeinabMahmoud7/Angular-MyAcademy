@@ -8,20 +8,22 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-all-exams',
   standalone: true,
-  imports: [CommonModule,RouterModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './all-exams.component.html',
   styleUrl: './all-exams.component.css'
 })
 export class AllExamsComponent implements OnInit {
-  exams:Iexam[]=[]
+  exams: Iexam[] = []
   totalQuestions: number = 0;
-totalTime: number = 0;
+  totalTime: number = 0;
 
-  constructor(private examService:ExamService){}
+  constructor(private examService: ExamService) { }
   ngOnInit(): void {
     this.examService.getAllExams().subscribe(
       {
-       next:(e:Iexam[])=> {this.exams=e}
+        next: (e: Iexam[]) => { this.exams = e,
+          console.log(e)
+        }
       }
     )
   }

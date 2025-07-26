@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Iuser } from '../module/iuser';
+import { IUserExams } from '../module/iuser-exams';
 @Injectable({
   providedIn: 'root'
 })
@@ -26,6 +27,12 @@ export class UserDataService {
   updateUserData(user: Iuser, id: number | string): Observable<Iuser> {
     return this.http.put<Iuser>(`${this.apiUrl}/${id}`, user);
   }
+ updateUserExams(userId: string, exams: IUserExams[]) {
+  return this.http.patch(`${this.apiUrl}/${userId}`, {
+    exams: exams
+  });
+}
+
 
 
 }

@@ -16,7 +16,8 @@ export class ProfileComponent implements OnInit {
     this.userData.getUserData().subscribe(
       {
         next:(Data: any)=>
-          { this.data=Data[Data.length-1],
+          {
+            this.data=Data[Data.length-1],
             console.log(this.data)
           },
         error:(err)=>console.log(err)

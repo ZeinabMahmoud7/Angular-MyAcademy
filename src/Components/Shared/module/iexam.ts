@@ -1,5 +1,5 @@
 export interface Iexam {
-  questions: any;
+  questions: any[];
   id?: number;
   title:string;
   time:number;

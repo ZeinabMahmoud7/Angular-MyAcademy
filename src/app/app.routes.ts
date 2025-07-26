@@ -18,7 +18,7 @@ export const routes: Routes = [
   { path: 'allExams', component: AllExamsComponent },
   { path: 'exam/:id', component: ExamComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'result', component: ResultComponent },
+  { path: 'result/:id', component: ResultComponent },
   { path: 'examForm/:id', component: ExamFormComponent },
   { path: 'questionForm/:id', component: QuestionFormComponent },
   { path: 'userResults', component: StudentResultsComponent },

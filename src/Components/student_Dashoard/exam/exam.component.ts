@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ExamService } from '../../Shared/services/exam.service';
-import { ActivatedRoute } from '@angular/router';
 import { Iexam } from '../../Shared/module/iexam';
 import { FormBuilder, FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { UserDataService } from '../../Shared/services/user-data.service'; // ✅ استيراد الخدمة
-
+import { UserDataService } from '../../Shared/services/user-data.service';
 @Component({
   selector: 'app-exam',
   standalone: true,
@@ -25,8 +23,8 @@ export class ExamComponent implements OnInit {
   constructor(
     private examService: ExamService,
     private route: ActivatedRoute,
-    private fb: FormBuilder,
-    private userDataService: UserDataService // ✅ حقن الخدمة
+    private userDataService: UserDataService,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
@@ -34,6 +32,7 @@ export class ExamComponent implements OnInit {
     this.examService.getQuestionByExamId(this.examId).subscribe({
       next: (data) => {
         this.examDetails = data;
+        console.log(data)
         this.createForm();
 
         this.timeLeft = (this.examDetails.time || 10) * 60;
@@ -89,7 +88,7 @@ export class ExamComponent implements OnInit {
         isCorrect: boolean;
       }[] = [];
 
-      this.examDetails.questions.forEach((question: { correctAnswer: any; id: any; }, index: string) => {
+      this.examDetails.questions.forEach((question: { correctAnswer: any; id: any; }, index: number) => {
         const controlName = 'question_' + index;
         const userAnswer = this.formQuestion.get(controlName)?.value;
         const correctAnswer = question.correctAnswer;
@@ -105,12 +104,11 @@ export class ExamComponent implements OnInit {
         });
       });
 
-      // ✅ حفظ السكور في الخدمة
       this.userDataService.setScore(correctCount);
-
+      
       console.log('Answers:', answersResult);
       console.log(`Total Correct Answers: ${correctCount} out of ${this.examDetails.questions.length}`);
-      alert(`Exam submitted successfully!\nCorrect Answers: ${correctCount}/${this.examDetails.questions.length}`);
+      this.router.navigate([`/result/${this.examId}`])
     } else {
       alert('Please answer all questions.');
       this.formQuestion.markAllAsTouched();

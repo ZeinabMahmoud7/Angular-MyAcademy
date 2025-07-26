@@ -5,10 +5,10 @@
       "title": "Node.js",
       "available": true,
       "completed": false,
-      "examTime": 10,
+      "examTime": 4,
       "difficulty": "medium",
-      "numberOfQuestions": 10,
-      "time": 20,
+      "numberOfQuestions": 3,
+      "time": 2,
       "questions": [
         {
           "id": 1,
@@ -42,83 +42,6 @@
             "node install package-name"
           ],
           "correctAnswer": "npm install package-name"
-        },
-        {
-          "id": 4,
-          "text": "What is 'package.json' used for?",
-          "options": [
-            "List project dependencies",
-            "Run Node server",
-            "Connect to database",
-            "Compile code"
-          ],
-          "correctAnswer": "List project dependencies"
-        },
-        {
-          "id": 5,
-          "text": "Which statement is true about Node.js?",
-          "options": [
-            "It runs in the browser",
-            "It is synchronous by default",
-            "It is built on Chrome's V8 engine",
-            "It uses Java"
-          ],
-          "correctAnswer": "It is built on Chrome's V8 engine"
-        },
-        {
-          "id": 6,
-          "text": "Which function is used to include external modules in Node.js?",
-          "options": [
-            "include()",
-            "import()",
-            "require()",
-            "load()"
-          ],
-          "correctAnswer": "require()"
-        },
-        {
-          "id": 7,
-          "text": "How do you export a module in Node.js?",
-          "options": [
-            "export myFunc",
-            "module.exports = myFunc",
-            "require.myFunc",
-            "module.myFunc"
-          ],
-          "correctAnswer": "module.exports = myFunc"
-        },
-        {
-          "id": 8,
-          "text": "What is the default scope in Node.js for variables?",
-          "options": [
-            "Global",
-            "Function",
-            "Block",
-            "Module"
-          ],
-          "correctAnswer": "Module"
-        },
-        {
-          "id": 9,
-          "text": "Which event is emitted when a stream is finished?",
-          "options": [
-            "done",
-            "end",
-            "finish",
-            "close"
-          ],
-          "correctAnswer": "end"
-        },
-        {
-          "id": 10,
-          "text": "Which of these is NOT a core module in Node.js?",
-          "options": [
-            "os",
-            "events",
-            "express",
-            "buffer"
-          ],
-          "correctAnswer": "express"
         }
       ]
     },
@@ -251,8 +174,8 @@
       "completed": false,
       "examTime": 10,
       "difficulty": "easy",
-      "numberOfQuestions": 10,
-      "time": 15,
+      "numberOfQuestions": 5,
+      "time": 1,
       "questions": [
         {
           "id": 1,
@@ -308,61 +231,6 @@
             "text-style"
           ],
           "correctAnswer": "font-size"
-        },
-        {
-          "id": 6,
-          "text": "How do you make a list that lists items with numbers?",
-          "options": [
-            "<ol>",
-            "<ul>",
-            "<dl>",
-            "<list>"
-          ],
-          "correctAnswer": "<ol>"
-        },
-        {
-          "id": 7,
-          "text": "What does CSS stand for?",
-          "options": [
-            "Cascading Style Sheets",
-            "Colorful Style Sheets",
-            "Computer Style Sheets",
-            "Creative Style Sheets"
-          ],
-          "correctAnswer": "Cascading Style Sheets"
-        },
-        {
-          "id": 8,
-          "text": "Which is the correct CSS syntax?",
-          "options": [
-            "{body:color=black;}",
-            "body {color: black;}",
-            "body = {color: black;}",
-            "{body;color:black;}"
-          ],
-          "correctAnswer": "body {color: black;}"
-        },
-        {
-          "id": 9,
-          "text": "How do you add a background color in CSS?",
-          "options": [
-            "background-color: red;",
-            "bg-color: red;",
-            "color-background: red;",
-            "background: red-color;"
-          ],
-          "correctAnswer": "background-color: red;"
-        },
-        {
-          "id": 10,
-          "text": "Which HTML tag is used to make text bold?",
-          "options": [
-            "<strong>",
-            "<b>",
-            "<bold>",
-            "<text-bold>"
-          ],
-          "correctAnswer": "<b>"
         }
       ]
     },
@@ -373,7 +241,7 @@
       "completed": false,
       "examTime": 15,
       "difficulty": "medium",
-      "numberOfQuestions": 10,
+      "numberOfQuestions": 3,
       "time": 20,
       "questions": [
         {
@@ -408,83 +276,6 @@
             "JS Editor"
           ],
           "correctAnswer": "JavaScript XML"
-        },
-        {
-          "id": 4,
-          "text": "Which hook is used to manage state in a functional component?",
-          "options": [
-            "useEffect",
-            "useState",
-            "useReducer",
-            "useContext"
-          ],
-          "correctAnswer": "useState"
-        },
-        {
-          "id": 5,
-          "text": "Which command creates a new React app?",
-          "options": [
-            "npm install react",
-            "npx create-react-app my-app",
-            "npm start react",
-            "react init my-app"
-          ],
-          "correctAnswer": "npx create-react-app my-app"
-        },
-        {
-          "id": 6,
-          "text": "Which of the following is a valid component name?",
-          "options": [
-            "header",
-            "HeaderComponent",
-            "header-component",
-            "componentHeader"
-          ],
-          "correctAnswer": "HeaderComponent"
-        },
-        {
-          "id": 7,
-          "text": "What does the useEffect hook do?",
-          "options": [
-            "Manages routing",
-            "Performs side effects in function components",
-            "Updates props",
-            "Creates context"
-          ],
-          "correctAnswer": "Performs side effects in function components"
-        },
-        {
-          "id": 8,
-          "text": "Which package is used for routing in React?",
-          "options": [
-            "react-router-dom",
-            "react-navigation",
-            "react-dom-router",
-            "router-react"
-          ],
-          "correctAnswer": "react-router-dom"
-        },
-        {
-          "id": 9,
-          "text": "Props in React are:",
-          "options": [
-            "Mutable",
-            "Read-only",
-            "Used for styling",
-            "Functions only"
-          ],
-          "correctAnswer": "Read-only"
-        },
-        {
-          "id": 10,
-          "text": "What is the virtual DOM?",
-          "options": [
-            "An API for DOM manipulation",
-            "A copy of the real DOM kept in memory",
-            "A new browser feature",
-            "A real DOM element"
-          ],
-          "correctAnswer": "A copy of the real DOM kept in memory"
         }
       ]
     },
@@ -495,7 +286,7 @@
       "completed": false,
       "examTime": 10,
       "difficulty": "medium",
-      "numberOfQuestions": 10,
+      "numberOfQuestions": 6,
       "time": 15,
       "questions": [
         {
@@ -563,50 +354,6 @@
             "fetch()"
           ],
           "correctAnswer": "find()"
-        },
-        {
-          "id": 7,
-          "text": "What is a collection in MongoDB?",
-          "options": [
-            "A group of SQL tables",
-            "A set of key-value pairs",
-            "A group of related documents",
-            "A single record"
-          ],
-          "correctAnswer": "A group of related documents"
-        },
-        {
-          "id": 8,
-          "text": "Which operator is used for greater than in queries?",
-          "options": [
-            "$gt",
-            "$gte",
-            "$greater",
-            "$more"
-          ],
-          "correctAnswer": "$gt"
-        },
-        {
-          "id": 9,
-          "text": "How do you delete a document?",
-          "options": [
-            "remove()",
-            "delete()",
-            "deleteOne()",
-            "drop()"
-          ],
-          "correctAnswer": "deleteOne()"
-        },
-        {
-          "id": 10,
-          "text": "Which of the following is a valid MongoDB data type?",
-          "options": [
-            "float",
-            "number",
-            "double",
-            "decimal"
-          ],
-          "correctAnswer": "double"
         }
       ]
     }
@@ -618,7 +365,29 @@
       "email": "shyma0448@gmail.com",
       "password": "123456",
       "studentId": 1,
-      "score": "didn't take any exam"
+      "exams": [ {
+      "examTitle": "Test Exam",
+      "score": 5
+    }]
+    },
+    {
+      "id": "0add",
+      "name": "shymaa Adel",
+      "email": "shyma0448@gmail.com",
+      "password": "123456",
+      "studentId": 1,
+      "exams": []
+    },
+    {
+      "id": "1f6a",
+      "name": "shymaa Adel",
+      "email": "sara123456adel789@gmail.com",
+      "password": "123456",
+      "studentId": 1,
+      "exams": [ {
+      "examTitle": "Test Exam",
+      "score": 5
+    }]
     }
   ]
 }

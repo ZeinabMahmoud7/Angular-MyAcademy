@@ -75,6 +75,7 @@ export class SignUpComponent implements OnInit {
 
   get getStudentId() { return this.registerForm.get('StudentId'); }
 
+
   onSubmit() {
     const isExisted = this.users.find(u => u.email === this.getEmail?.value);
     if (!this.registerForm.valid) {
@@ -95,7 +96,9 @@ export class SignUpComponent implements OnInit {
       email: formValue.Email as string,
       password:formValue.Password as string,
       studentId: Number(formValue.StudentId),
-      score: "didn't take any exam"
+       exams: [examTitle:'',
+        score:0
+       ]
     };
 
 
@@ -103,7 +106,7 @@ export class SignUpComponent implements OnInit {
 
     this.userData.setUserData(enteredUserData).subscribe({
       next: () => {
-        this.router.navigate(['allExams']);
+        this.router.navigate(['login']);
       }
     });
 

@@ -7,15 +7,13 @@ import { Iexam } from '../module/iexam';
   providedIn: 'root'
 })
 export class ExamService {
-  private apiUrl='http://localhost:3000/exams'
-  constructor(private http:HttpClient) { }
-  getAllExams():Observable<Iexam[]>
-  {
+  private apiUrl = 'http://localhost:3000/exams'
+  constructor(private http: HttpClient) { }
+  getAllExams(): Observable<Iexam[]> {
     return this.http.get<Iexam[]>(this.apiUrl)
   }
- getQuestionByExamId(examId:number):Observable<any>
- {
-return this.http.get(`${this.apiUrl}/${examId}`)
- }
-
+  getQuestionByExamId(examId: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${examId}`)
+  }
+  
 }

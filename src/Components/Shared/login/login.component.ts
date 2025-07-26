@@ -46,7 +46,6 @@ export class LoginComponent implements OnInit {
 
     const email = this.loginForm.get('Email')?.value;
     const password = this.loginForm.get('Password')?.value;
-
     // Admin Data
     const adminEmail = 'admin123@gmail.com';
     const adminPassword = 'admin123';
@@ -59,6 +58,8 @@ export class LoginComponent implements OnInit {
     const isExisted = this.user.find(u => u.email == this.getEmail?.value && u.password == this.getPassword?.value)
     if (isExisted) {
       alert(`Welcome ${isExisted.name || 'User'}!`);
+      localStorage.setItem("email",email!)
+
       this.router.navigate(['/allExams']);
       this.loginForm.reset();
     } else {
